@@ -292,9 +292,9 @@
 
     .brand {
       display: inline-grid;
-      grid-template-columns: 38px auto;
+      grid-template-columns: 42px auto;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-weight: 930;
       letter-spacing: 0;
     }
@@ -332,6 +332,9 @@
     }
 
     .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
       padding: 10px 12px;
       border-radius: var(--radius);
       color: rgba(16, 24, 32, .78);
@@ -345,6 +348,26 @@
       outline: none;
       color: var(--ink);
       background: rgba(16, 24, 32, .07);
+    }
+
+    .nav-icon,
+    .button-icon,
+    .chip-icon,
+    .kicker-icon,
+    .card-icon,
+    .strip-icon,
+    .metric-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      line-height: 1;
+    }
+
+    .nav-icon {
+      width: 1.2em;
+      opacity: .74;
+      font-size: .95em;
     }
 
     .menu-toggle {
@@ -450,9 +473,27 @@
 
     .eyebrow::before {
       content: "";
+      flex: 0 0 auto;
       width: 34px;
       height: 2px;
       background: var(--coral);
+    }
+
+    .eyebrow-icon {
+      width: 26px;
+      min-width: 26px;
+      font-size: 1rem;
+    }
+
+    .kicker-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      border-radius: 50%;
+      color: var(--ink);
+      background: rgba(101, 210, 205, .92);
+      font-size: .82rem;
+      vertical-align: middle;
     }
 
     h1 {
@@ -498,6 +539,19 @@
       transition: transform .16s ease, background .16s ease, border-color .16s ease, color .16s ease;
     }
 
+    .button-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      font-size: .92rem;
+      background: rgba(255, 255, 255, .18);
+    }
+
+    .button.primary .button-icon,
+    .button.light .button-icon {
+      background: rgba(16, 24, 32, .08);
+    }
+
     .button:hover {
       transform: translateY(-2px);
     }
@@ -535,6 +589,9 @@
     }
 
     .promo-line span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
       padding: 8px 10px;
       border-radius: 999px;
       color: rgba(255, 255, 255, .86);
@@ -565,12 +622,23 @@
     }
 
     .strip-item span {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 7px;
       color: rgba(255, 255, 255, .58);
       font-size: .78rem;
       font-weight: 850;
       text-transform: uppercase;
       letter-spacing: .08em;
+    }
+
+    .strip-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      color: #fff;
+      background: rgba(255, 255, 255, .1);
+      font-size: .9rem;
     }
 
     .strip-item strong {
@@ -683,6 +751,30 @@
       letter-spacing: 0;
     }
 
+    .card-title {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+    }
+
+    .card-icon {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(16, 24, 32, .1);
+      border-radius: 50%;
+      color: var(--ink);
+      background: rgba(0, 143, 139, .1);
+      font-size: 1rem;
+    }
+
+    .dark .card-icon,
+    .feature-card .card-icon,
+    .work-card .card-icon {
+      color: #fff;
+      border-color: rgba(255, 255, 255, .16);
+      background: rgba(101, 210, 205, .12);
+    }
+
     .card p,
     .work-card p,
     .timeline-item p {
@@ -756,16 +848,17 @@
     .work-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+      gap: 16px;
     }
 
     .work-card {
-      min-height: 292px;
+      min-height: 328px;
       border: 1px solid rgba(255, 255, 255, .16);
       border-radius: var(--radius);
       padding: 22px;
       display: grid;
-      align-content: space-between;
+      grid-template-rows: auto auto 1fr;
+      gap: 18px;
       background: rgba(255, 255, 255, .07);
       transition: transform .18s ease, background .18s ease, border-color .18s ease;
     }
@@ -780,11 +873,23 @@
       color: rgba(255, 255, 255, .68);
     }
 
+    .work-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
     .work-number {
       color: rgba(255, 255, 255, .34);
-      font-size: 4.6rem;
+      font-size: clamp(3.1rem, 6vw, 4rem);
       font-weight: 950;
       line-height: .8;
+    }
+
+    .work-card .micro-list {
+      align-self: start;
+      margin-top: 0;
     }
 
     .timeline {
@@ -918,8 +1023,20 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 18px;
+      display: grid;
+      align-content: start;
       background: #fff;
       box-shadow: 0 12px 34px rgba(16, 24, 32, .05);
+    }
+
+    .metric-icon {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(0, 143, 139, .2);
+      border-radius: 50%;
+      background: rgba(0, 143, 139, .09);
+      font-size: 1rem;
     }
 
     .evidence-card strong {
@@ -1094,13 +1211,14 @@
       .nav-links {
         position: fixed;
         inset: 64px 14px auto;
+        z-index: 24;
         padding: 10px;
         display: none;
         flex-direction: column;
         align-items: stretch;
         border: 1px solid var(--line);
         border-radius: var(--radius);
-        background: rgba(255, 255, 255, .96);
+        background: #fff;
         box-shadow: var(--shadow);
       }
 
@@ -1109,11 +1227,13 @@
       }
 
       .nav-links a {
+        justify-content: flex-start;
         padding: 14px 12px;
       }
 
       .brand {
-        grid-template-columns: 34px auto;
+        grid-template-columns: 34px minmax(0, auto);
+        gap: 10px;
       }
 
       .brand-mark {
@@ -1147,8 +1267,8 @@
 
       .hero-actions .button {
         min-height: 44px;
-        flex: 1 1 calc(50% - 8px);
-        width: auto;
+        flex: 1 1 100%;
+        width: 100%;
         padding: 11px 12px;
       }
 
@@ -1210,6 +1330,21 @@
         padding: 62px 0;
       }
 
+      .section-head {
+        gap: 18px;
+        margin-bottom: 24px;
+      }
+
+      .work-card {
+        min-height: auto;
+        padding: 20px;
+        gap: 14px;
+      }
+
+      .work-number {
+        font-size: 3rem;
+      }
+
       .timeline-item {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -1245,7 +1380,19 @@
 
     @media (max-width: 380px) {
       .hero-strip {
-        display: none;
+        grid-template-columns: 1fr;
+      }
+
+      .strip-item,
+      .strip-item:nth-child(2),
+      .strip-item:nth-child(3),
+      .strip-item:nth-child(4) {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, .16);
+      }
+
+      .strip-item:first-child {
+        border-top: 0;
       }
     }
 
@@ -1277,10 +1424,10 @@
         <span aria-hidden="true"></span>
       </button>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#focus">Impact</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#profile">Research</a>
-        <a href="#speaking">Speaking</a>
+        <a href="#focus"><span class="nav-icon" aria-hidden="true">↗</span>Impact</a>
+        <a href="#expertise"><span class="nav-icon" aria-hidden="true">⚙️</span>Expertise</a>
+        <a href="#profile"><span class="nav-icon" aria-hidden="true">🎓</span>Research</a>
+        <a href="#speaking"><span class="nav-icon" aria-hidden="true">🎤</span>Speaking</a>
       </nav>
     </div>
   </header>
@@ -1289,39 +1436,39 @@
     <section class="hero" id="top" aria-labelledby="heroTitle">
       <div class="hero-inner">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Group CTO | PhD in Information Systems</p>
+          <p class="eyebrow"><span class="eyebrow-icon" aria-hidden="true">⚡</span>Group CTO | PhD in Information Systems</p>
           <h1 id="heroTitle">Shaya Pourmirza</h1>
           <p class="hero-subtitle">
             <strong>Official profile of Shaya Pourmirza.</strong>
             Technology executive at Atida, building the data, AI and platform foundations that let pharmacy scale across markets, with academic depth in information systems.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="me noreferrer">LinkedIn profile</a>
-            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="me noreferrer">Google Scholar</a>
-            <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf" target="_blank" rel="noreferrer">Runtime Party Switch book</a>
+            <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">in</span>LinkedIn profile</a>
+            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">🎓</span>Google Scholar</a>
+            <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf" target="_blank" rel="noreferrer"><span class="button-icon" aria-hidden="true">📘</span>Runtime Party Switch book</a>
           </div>
           <div class="promo-line" aria-label="Core domains">
-            <span>Group CTO</span>
-            <span>AI + Data Leadership</span>
-            <span>Academic Systems Research</span>
+            <span><span class="chip-icon" aria-hidden="true">🏢</span>Group CTO</span>
+            <span><span class="chip-icon" aria-hidden="true">🤖</span>AI + Data Leadership</span>
+            <span><span class="chip-icon" aria-hidden="true">🎓</span>Academic Systems Research</span>
           </div>
         </div>
 
         <div class="hero-strip reveal" aria-label="Profile highlights">
           <div class="strip-item">
-            <span>Experience</span>
+            <span><span class="strip-icon" aria-hidden="true">⏱️</span>Experience</span>
             <strong>15+ years in data, software and IT</strong>
           </div>
           <div class="strip-item">
-            <span>Leadership</span>
+            <span><span class="strip-icon" aria-hidden="true">🧭</span>Leadership</span>
             <strong>Product, data and engineering leadership across European markets</strong>
           </div>
           <div class="strip-item">
-            <span>Research</span>
+            <span><span class="strip-icon" aria-hidden="true">🎓</span>Research</span>
             <strong>PhD, 15+ peer-reviewed publications</strong>
           </div>
           <div class="strip-item">
-            <span>Public Signal</span>
+            <span><span class="strip-icon" aria-hidden="true">🎤</span>Public Signal</span>
             <strong>Speaker, panelist, reviewer, author</strong>
           </div>
         </div>
@@ -1332,8 +1479,8 @@
       <div class="section-inner">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker">Executive technology impact</p>
-            <h2>Business strategy, grounded in technology systems.</h2>
+            <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">↗</span>Executive technology impact</p>
+            <h2>Business strategy, grounded in technology expertise.</h2>
           </div>
           <p class="lead">
             Group CTO, AI and data leader, cross-market technology executive, and PhD-trained information systems researcher.
@@ -1343,7 +1490,10 @@
         <div class="feature-band">
           <article class="card feature-card reveal">
             <div>
-              <h3>CTO-level operating leverage</h3>
+              <div class="card-title">
+                <span class="card-icon" aria-hidden="true">⚙️</span>
+                <h3>CTO-level operating leverage</h3>
+              </div>
               <ul class="micro-list">
                 <li>Technology strategy that is understandable at board level and executable by teams.</li>
                 <li>Multi-market commerce, data and AI platforms designed for scale.</li>
@@ -1353,7 +1503,10 @@
           </article>
 
           <article class="card reveal">
-            <h3>Business-facing technology leadership</h3>
+            <div class="card-title">
+              <span class="card-icon" aria-hidden="true">🧭</span>
+              <h3>Business-facing technology leadership</h3>
+            </div>
             <ul class="micro-list">
               <li>Group CTO, co-CTO France &amp; Iberia, Head of Enterprise Architecture, and Head of Ecommerce &amp; Data experience.</li>
               <li>Budget, vendor and portfolio decisions with explicit business trade-offs.</li>
@@ -1365,18 +1518,22 @@
 
         <div class="evidence-grid reveal" aria-label="Senior profile proof points">
           <div class="evidence-card">
+            <span class="metric-icon" aria-hidden="true">⏱️</span>
             <strong>15+</strong>
             <span>years in data, software development and IT</span>
           </div>
           <div class="evidence-card">
+            <span class="metric-icon" aria-hidden="true">🧭</span>
             <strong>8+</strong>
             <span>years of technology leadership across product and data</span>
           </div>
           <div class="evidence-card">
+            <span class="metric-icon" aria-hidden="true">🌍</span>
             <strong>70+</strong>
             <span>product, data, engineering and platform specialists led across European markets</span>
           </div>
           <div class="evidence-card">
+            <span class="metric-icon" aria-hidden="true">🎓</span>
             <strong>PhD</strong>
             <span>Information Systems research with 290+ citations across the publication record</span>
           </div>
@@ -1388,7 +1545,7 @@
       <div class="section-inner">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker">Core technology expertise</p>
+            <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">⚙️</span>Core technology expertise</p>
             <h2>Composable commerce, AI and data, technology leadership.</h2>
           </div>
           <p class="lead">
@@ -1398,39 +1555,42 @@
 
         <div class="work-grid">
           <article class="work-card reveal">
-            <div class="work-number">01</div>
-            <div>
-              <h3>Composable e-commerce: B2C and B2B</h3>
-              <ul class="micro-list">
-                <li>MACH, headless and API-first commerce architecture.</li>
-                <li>B2C and B2B journeys across catalog, pricing, checkout, fulfillment and service.</li>
-                <li>Platform modernization without losing business continuity.</li>
-              </ul>
+            <div class="work-meta">
+              <div class="work-number">01</div>
+              <span class="card-icon" aria-hidden="true">🧩</span>
             </div>
+            <h3>Composable e-commerce: B2C and B2B</h3>
+            <ul class="micro-list">
+              <li>MACH, headless and API-first commerce architecture.</li>
+              <li>B2C and B2B journeys across catalog, pricing, checkout, fulfillment and service.</li>
+              <li>Platform modernization without losing business continuity.</li>
+            </ul>
           </article>
 
           <article class="work-card reveal">
-            <div class="work-number">02</div>
-            <div>
-              <h3>AI and data foundations</h3>
-              <ul class="micro-list">
-                <li>No serious AI without data foundations: ownership, quality, context and governance.</li>
-                <li>AI initiatives connected to customer experience, pharmacy workflows, operations and productivity.</li>
-                <li>Prioritization by business value, adoption, risk and measurable throughput.</li>
-              </ul>
+            <div class="work-meta">
+              <div class="work-number">02</div>
+              <span class="card-icon" aria-hidden="true">🤖</span>
             </div>
+            <h3>AI and data foundations</h3>
+            <ul class="micro-list">
+              <li>No serious AI without data foundations: ownership, quality, context and governance.</li>
+              <li>AI initiatives connected to customer experience, pharmacy workflows, operations and productivity.</li>
+              <li>Prioritization by business value, adoption, risk and measurable throughput.</li>
+            </ul>
           </article>
 
           <article class="work-card reveal">
-            <div class="work-number">03</div>
-            <div>
-              <h3>Technology and data leadership</h3>
-              <ul class="micro-list">
-                <li>Leadership across product, data, engineering, architecture and platform teams.</li>
-                <li>Operating models with ownership, delivery discipline and cross-market clarity.</li>
-                <li>Vendor, budget and integration decisions made with executive context.</li>
-              </ul>
+            <div class="work-meta">
+              <div class="work-number">03</div>
+              <span class="card-icon" aria-hidden="true">🧭</span>
             </div>
+            <h3>Technology and data leadership</h3>
+            <ul class="micro-list">
+              <li>Leadership across product, data, engineering, architecture and platform teams.</li>
+              <li>Operating models with ownership, delivery discipline and cross-market clarity.</li>
+              <li>Vendor, budget and integration decisions made with executive context.</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -1454,7 +1614,7 @@
           <div>
             <div class="section-head reveal" style="grid-template-columns: 1fr; gap: 16px; margin-bottom: 24px;">
               <div>
-                <p class="section-kicker">Academic depth and executive profile</p>
+                <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">🎓</span>Academic depth and executive profile</p>
                 <h2>A Group CTO with a full research and professional track.</h2>
               </div>
             </div>
@@ -1463,7 +1623,10 @@
               <article class="timeline-item reveal">
                 <div class="timeline-date">Now</div>
                 <div>
-                  <h3>Group CTO at Atida</h3>
+                  <div class="card-title">
+                    <span class="card-icon" aria-hidden="true">🏢</span>
+                    <h3>Group CTO at Atida</h3>
+                  </div>
                   <ul class="micro-list">
                     <li>Technology strategy, roadmap and operating model across markets.</li>
                     <li>Digital platform, product capabilities, data foundations and AI initiatives.</li>
@@ -1476,7 +1639,10 @@
               <article class="timeline-item reveal">
                 <div class="timeline-date">PhD</div>
                 <div>
-                  <h3>Business Process Management and Information Systems</h3>
+                  <div class="card-title">
+                    <span class="card-icon" aria-hidden="true">🎓</span>
+                    <h3>Business Process Management and Information Systems</h3>
+                  </div>
                   <ul class="micro-list">
                     <li>Google Scholar profile: Eindhoven University of Technology.</li>
                     <li>Research areas include Business Process Management, Information Systems and Service-Oriented Computing.</li>
@@ -1488,7 +1654,10 @@
               <article class="timeline-item reveal">
                 <div class="timeline-date">Publications</div>
                 <div>
-                  <h3>Author, reviewer and academic contributor</h3>
+                  <div class="card-title">
+                    <span class="card-icon" aria-hidden="true">📚</span>
+                    <h3>Author, reviewer and academic contributor</h3>
+                  </div>
                   <ul class="micro-list">
                     <li>15+ peer-reviewed international publications.</li>
                     <li>Book: Runtime Party Switch in an Inter-Organizational Collaboration.</li>
@@ -1501,7 +1670,10 @@
               <article class="timeline-item reveal">
                 <div class="timeline-date">Mentorship</div>
                 <div>
-                  <h3>Teaching, supervision and technical community</h3>
+                  <div class="card-title">
+                    <span class="card-icon" aria-hidden="true">🧑‍🏫</span>
+                    <h3>Teaching, supervision and technical community</h3>
+                  </div>
                   <ul class="micro-list">
                     <li>Supervised 30+ bachelor and master students.</li>
                     <li>Teaching and research assistant experience at TU/e and Shiraz University of Technology.</li>
@@ -1513,7 +1685,7 @@
 
             <article class="featured-work reveal" aria-labelledby="runtimeBookTitle">
               <div>
-                <p class="section-kicker">Featured book</p>
+                <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">📘</span>Featured book</p>
                 <h3 id="runtimeBookTitle">Runtime Party Switch in an Inter-Organizational Collaboration</h3>
                 <ul class="micro-list">
                   <li>PhD book and dissertation from Eindhoven University of Technology.</li>
@@ -1551,14 +1723,17 @@
       <div class="section-inner">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker">Public speaking and thought leadership</p>
+            <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">🎤</span>Public speaking and thought leadership</p>
             <h2>Executive themes for audiences that care about outcomes.</h2>
           </div>
         </div>
 
         <div class="signal-grid">
           <article class="card reveal">
-            <h3>AI beyond demos</h3>
+            <div class="card-title">
+              <span class="card-icon" aria-hidden="true">🤖</span>
+              <h3>AI beyond demos</h3>
+            </div>
             <ul class="micro-list">
               <li>Data foundations first: ownership, quality, context and governance before model selection.</li>
               <li>AI should sit inside operating workflows, not next to them as a side project.</li>
@@ -1567,7 +1742,10 @@
           </article>
 
           <article class="card reveal">
-            <h3>MACH, microservices and platform strategy</h3>
+            <div class="card-title">
+              <span class="card-icon" aria-hidden="true">🧩</span>
+              <h3>MACH, microservices and platform strategy</h3>
+            </div>
             <ul class="micro-list">
               <li>Composable architecture as business optionality.</li>
               <li>Headless commerce and API-first product platforms.</li>
@@ -1576,7 +1754,10 @@
           </article>
 
           <article class="card reveal">
-            <h3>Data, product and digital pharmacy</h3>
+            <div class="card-title">
+              <span class="card-icon" aria-hidden="true">💊</span>
+              <h3>Data, product and digital pharmacy</h3>
+            </div>
             <ul class="micro-list">
               <li>Data, AI and product working as one operating capability.</li>
               <li>Customer experience, pharmacist expertise, operations and trust connected in one system.</li>
@@ -1585,7 +1766,10 @@
           </article>
 
           <article class="card reveal">
-            <h3>Adaptive systems and process research</h3>
+            <div class="card-title">
+              <span class="card-icon" aria-hidden="true">🎓</span>
+              <h3>Adaptive systems and process research</h3>
+            </div>
             <ul class="micro-list">
               <li>Business process management systems.</li>
               <li>Runtime party switching in inter-organizational collaboration.</li>
@@ -1601,13 +1785,13 @@
       <div class="section-inner">
         <div class="contact-band reveal">
           <div>
-            <p class="section-kicker" style="color: rgba(255,255,255,.74);">Public profile</p>
+            <p class="section-kicker" style="color: rgba(255,255,255,.74);"><span class="kicker-icon" aria-hidden="true">🔗</span>Public profile</p>
             <h2>For the official profile, research record and public technology work.</h2>
           </div>
           <div class="contact-actions">
-            <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="me noreferrer">LinkedIn</a>
-            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="me noreferrer">Google Scholar</a>
-            <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza" target="_blank" rel="me noreferrer">ResearchGate</a>
+            <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">in</span>LinkedIn</a>
+            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">🎓</span>Google Scholar</a>
+            <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">RG</span>ResearchGate</a>
           </div>
         </div>
       </div>
