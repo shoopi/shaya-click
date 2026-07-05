@@ -1,0 +1,1355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101820">
+  <title>Shaya Pourmirza - CTO, Product, Data, AI</title>
+  <meta name="description" content="Personal promo site and app catalogue for Shaya Pourmirza: CTO, product platforms, data foundations, practical AI, and digital pharmacy.">
+  <meta property="og:title" content="Shaya Pourmirza">
+  <meta property="og:description" content="Technology executive building digital pharmacy, product platforms, data foundations, practical AI, and strong engineering teams.">
+  <meta property="og:image" content="https://shaya.click/assets/shaya-atida-headshot.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shaya.click/">
+  <link rel="canonical" href="https://shaya.click/">
+  <link rel="icon" type="image/jpeg" href="/assets/shaya-atida-headshot.jpg">
+  <link rel="apple-touch-icon" href="/assets/shaya-atida-headshot.jpg">
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    :root {
+      --ink: #101820;
+      --muted: #5a6671;
+      --paper: #f7faf9;
+      --white: #ffffff;
+      --line: rgba(16, 24, 32, .14);
+      --teal: #008f8b;
+      --teal-dark: #006f70;
+      --coral: #e4563f;
+      --mustard: #dca537;
+      --blue: #2f6cbb;
+      --shadow: 0 22px 60px rgba(16, 24, 32, .14);
+      --radius: 8px;
+      --max: 1180px;
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16, 24, 32, .035) 1px, transparent 1px),
+        linear-gradient(180deg, #f7fbfa 0%, #ffffff 44%, #f2f6f7 100%);
+      background-size: 32px 32px, auto;
+      text-rendering: geometricPrecision;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      z-index: 30;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      color: #fff;
+      background: var(--ink);
+      font-weight: 850;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      border-bottom: 1px solid transparent;
+      transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(248, 250, 249, .9);
+      border-color: var(--line);
+      box-shadow: 0 10px 30px rgba(16, 24, 32, .08);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-wrap {
+      width: min(var(--max), calc(100% - 40px));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-grid;
+      grid-template-columns: 38px auto;
+      align-items: center;
+      gap: 10px;
+      font-weight: 930;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: conic-gradient(from 160deg, var(--teal), var(--blue), var(--coral), var(--mustard), var(--teal));
+      box-shadow: 0 8px 18px rgba(0, 143, 139, .24);
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 760;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+    }
+
+    .nav-links a {
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      color: rgba(16, 24, 32, .78);
+      font-size: .92rem;
+      font-weight: 780;
+      transition: background .16s ease, color .16s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      outline: none;
+      color: var(--ink);
+      background: rgba(16, 24, 32, .07);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .72);
+      color: var(--ink);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+      transition: transform .18s ease, opacity .18s ease;
+      content: "";
+    }
+
+    .menu-toggle span::before {
+      transform: translateY(-6px);
+    }
+
+    .menu-toggle span::after {
+      transform: translateY(4px);
+    }
+
+    body.menu-open .menu-toggle span {
+      transform: rotate(45deg);
+    }
+
+    body.menu-open .menu-toggle span::before {
+      opacity: 0;
+    }
+
+    body.menu-open .menu-toggle span::after {
+      transform: translateY(-2px) rotate(-90deg);
+    }
+
+    .hero {
+      min-height: 88svh;
+      padding: 116px 0 52px;
+      display: grid;
+      align-items: end;
+      position: relative;
+      overflow: clip;
+      color: #fff;
+      background:
+        radial-gradient(circle at 76% 18%, rgba(220, 165, 55, .28), transparent 28%),
+        linear-gradient(90deg, rgba(16, 24, 32, .98) 0%, rgba(16, 24, 32, .9) 38%, rgba(16, 24, 32, .42) 66%, rgba(16, 24, 32, .16) 100%),
+        linear-gradient(180deg, rgba(16, 24, 32, .08), rgba(16, 24, 32, .46)),
+        url("/assets/shaya-atida-hero.jpg");
+      background-position: center, center, center, 82% 36%;
+      background-size: cover, cover, cover, auto 112%;
+      background-repeat: no-repeat;
+      isolation: isolate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 22%;
+      background: linear-gradient(180deg, transparent, rgba(16, 24, 32, .92));
+      z-index: -1;
+    }
+
+    .hero-inner,
+    .section-inner,
+    .footer-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero-inner {
+      display: grid;
+      gap: 34px;
+    }
+
+    .hero-copy {
+      max-width: 790px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, .84);
+      font-size: .84rem;
+      font-weight: 860;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--coral);
+    }
+
+    h1 {
+      max-width: 820px;
+      margin: 0;
+      font-size: clamp(3.25rem, 8.6vw, 7.9rem);
+      line-height: .88;
+      letter-spacing: 0;
+    }
+
+    .hero-subtitle {
+      max-width: 710px;
+      margin: 24px 0 0;
+      color: rgba(255, 255, 255, .88);
+      font-size: clamp(1.03rem, 2.1vw, 1.44rem);
+      line-height: 1.52;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      padding: 13px 16px;
+      font-weight: 860;
+      letter-spacing: 0;
+      transition: transform .16s ease, background .16s ease, border-color .16s ease, color .16s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      color: var(--ink);
+      background: #fff;
+      box-shadow: 0 18px 34px rgba(0, 0, 0, .22);
+    }
+
+    .button.secondary {
+      color: #fff;
+      border-color: rgba(255, 255, 255, .3);
+      background: rgba(255, 255, 255, .08);
+      backdrop-filter: blur(12px);
+    }
+
+    .button.dark {
+      color: #fff;
+      background: var(--ink);
+      box-shadow: 0 16px 30px rgba(16, 24, 32, .18);
+    }
+
+    .button.light {
+      color: var(--ink);
+      border-color: var(--line);
+      background: #fff;
+    }
+
+    .hero-note {
+      max-width: 570px;
+      margin-top: 16px;
+      color: rgba(255, 255, 255, .66);
+      font-size: .92rem;
+      line-height: 1.55;
+    }
+
+    .promo-line {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .promo-line span {
+      padding: 8px 10px;
+      border-radius: 999px;
+      color: rgba(255, 255, 255, .86);
+      border: 1px solid rgba(255, 255, 255, .22);
+      background: rgba(255, 255, 255, .08);
+      font-size: .82rem;
+      font-weight: 820;
+    }
+
+    .hero-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: var(--radius);
+      background: rgba(16, 24, 32, .52);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+    }
+
+    .strip-item {
+      min-height: 112px;
+      padding: 18px;
+      border-left: 1px solid rgba(255, 255, 255, .16);
+    }
+
+    .strip-item:first-child {
+      border-left: 0;
+    }
+
+    .strip-item span {
+      display: block;
+      color: rgba(255, 255, 255, .58);
+      font-size: .78rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .strip-item strong {
+      display: block;
+      margin-top: 12px;
+      color: #fff;
+      font-size: 1.02rem;
+      line-height: 1.28;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section.dark {
+      color: #fff;
+      background: var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .82fr) minmax(280px, .52fr);
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .section-kicker {
+      margin: 0 0 12px;
+      color: var(--teal-dark);
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .dark .section-kicker {
+      color: #65d2cd;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 4.4rem);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+      line-height: 1.7;
+    }
+
+    .dark .lead {
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .feature-band,
+    .catalogue-grid,
+    .signal-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature-band {
+      grid-template-columns: minmax(0, .9fr) minmax(280px, .42fr);
+      margin-bottom: 14px;
+    }
+
+    .signal-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: rgba(255, 255, 255, .9);
+      box-shadow: 0 12px 34px rgba(16, 24, 32, .06);
+    }
+
+    .feature-card {
+      min-height: 320px;
+      display: grid;
+      align-content: end;
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(16, 24, 32, .1), rgba(16, 24, 32, .86)),
+        url("/assets/shaya-atida-headshot.jpg");
+      background-size: cover;
+      background-position: center 34%;
+    }
+
+    .feature-card p {
+      color: rgba(255, 255, 255, .76);
+    }
+
+    .card h3,
+    .app-card h3,
+    .work-card h3,
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 1.18rem;
+      letter-spacing: 0;
+    }
+
+    .card p,
+    .app-card p,
+    .work-card p,
+    .timeline-item p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      line-height: 1.62;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 7px 9px;
+      border: 1px solid rgba(16, 24, 32, .13);
+      border-radius: 999px;
+      color: rgba(16, 24, 32, .7);
+      background: rgba(255, 255, 255, .56);
+      font-size: .78rem;
+      font-weight: 820;
+    }
+
+    .dark .tag,
+    .feature-card .tag {
+      color: rgba(255, 255, 255, .88);
+      border-color: rgba(255, 255, 255, .22);
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .catalogue-grid {
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, .62fr);
+      align-items: stretch;
+    }
+
+    .app-card {
+      min-height: 360px;
+      position: relative;
+      display: grid;
+      align-content: space-between;
+      border-radius: var(--radius);
+      padding: 24px;
+      color: #fff;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background:
+        linear-gradient(135deg, rgba(0, 143, 139, .94), rgba(16, 24, 32, .94) 55%, rgba(47, 108, 187, .86)),
+        radial-gradient(circle at 82% 22%, rgba(220, 165, 55, .34), transparent 28%);
+      box-shadow: var(--shadow);
+    }
+
+    .app-card::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -70px;
+      bottom: -92px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 50%;
+    }
+
+    .app-card p {
+      max-width: 680px;
+      color: rgba(255, 255, 255, .74);
+    }
+
+    .app-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .app-meta span {
+      padding: 7px 9px;
+      border-radius: 999px;
+      color: rgba(255, 255, 255, .84);
+      border: 1px solid rgba(255, 255, 255, .2);
+      background: rgba(255, 255, 255, .08);
+      font-size: .78rem;
+      font-weight: 820;
+    }
+
+    .coming-card {
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-app {
+      min-height: 104px;
+      border: 1px dashed rgba(16, 24, 32, .22);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: rgba(255, 255, 255, .62);
+    }
+
+    .mini-app strong {
+      display: block;
+    }
+
+    .mini-app span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      line-height: 1.46;
+      font-size: .94rem;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .work-card {
+      min-height: 292px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: var(--radius);
+      padding: 22px;
+      display: grid;
+      align-content: space-between;
+      background: rgba(255, 255, 255, .07);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, .32);
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .work-card p {
+      color: rgba(255, 255, 255, .68);
+    }
+
+    .work-number {
+      color: rgba(255, 255, 255, .34);
+      font-size: 4.6rem;
+      font-weight: 950;
+      line-height: .8;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 46px;
+      align-items: start;
+    }
+
+    .timeline-aside {
+      position: sticky;
+      top: 104px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .portrait-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .portrait-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 28%;
+    }
+
+    .mini-profile {
+      padding: 18px;
+    }
+
+    .mini-profile strong {
+      display: block;
+      font-size: 1.08rem;
+    }
+
+    .mini-profile span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      line-height: 1.42;
+    }
+
+    .timeline-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 110px minmax(0, 1fr);
+      gap: 22px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .timeline-date {
+      color: var(--teal-dark);
+      font-size: .84rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .proof-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .proof {
+      min-height: 128px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .proof strong {
+      display: block;
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .proof span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.35;
+      font-weight: 720;
+    }
+
+    .contact-band {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 26px;
+      align-items: center;
+      border-radius: var(--radius);
+      padding: 34px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(0, 143, 139, .94), rgba(16, 24, 32, .95) 58%, rgba(228, 86, 63, .9)),
+        url("/assets/shaya-atida-hero.jpg");
+      background-size: cover;
+      background-position: 76% 38%;
+      overflow: hidden;
+    }
+
+    .contact-band h2 {
+      max-width: 760px;
+      font-size: clamp(2rem, 4.2vw, 4rem);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .site-footer {
+      padding: 30px 0 42px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .48s ease, transform .48s ease;
+    }
+
+    .js .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 960px) {
+      .hero {
+        min-height: 90svh;
+        background:
+          linear-gradient(180deg, rgba(16, 24, 32, .18) 0%, rgba(16, 24, 32, .88) 52%, rgba(16, 24, 32, .98) 100%),
+          url("/assets/shaya-atida-hero.jpg");
+        background-size: cover, auto 108%;
+        background-position: center, 50% top;
+      }
+
+      .hero-strip,
+      .feature-band,
+      .catalogue-grid,
+      .section-head,
+      .timeline,
+      .contact-band {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-strip,
+      .signal-grid,
+      .work-grid,
+      .proof-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .strip-item:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, .16);
+      }
+
+      .strip-item:nth-child(4) {
+        border-top: 1px solid rgba(255, 255, 255, .16);
+      }
+
+      .timeline-aside {
+        position: static;
+        grid-template-columns: 220px minmax(0, 1fr);
+        align-items: stretch;
+      }
+
+      .portrait-card img {
+        height: 100%;
+      }
+
+      .contact-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-wrap,
+      .hero-inner,
+      .section-inner,
+      .footer-inner {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav-wrap {
+        min-height: 64px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: fixed;
+        inset: 64px 14px auto;
+        padding: 10px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(255, 255, 255, .96);
+        box-shadow: var(--shadow);
+      }
+
+      body.menu-open .nav-links {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 14px 12px;
+      }
+
+      .brand {
+        grid-template-columns: 34px auto;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+      }
+
+      .brand small {
+        display: none;
+      }
+
+      .hero {
+        padding: 92px 0 30px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 18vw, 4.7rem);
+      }
+
+      .hero-subtitle {
+        font-size: 1.02rem;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .hero-strip,
+      .signal-grid,
+      .work-grid,
+      .proof-row,
+      .timeline-aside {
+        grid-template-columns: 1fr;
+      }
+
+      .strip-item {
+        min-height: auto;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, .16);
+      }
+
+      .strip-item:first-child {
+        border-top: 0;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .contact-band {
+        padding: 24px;
+      }
+
+      .contact-actions .button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Shaya Pourmirza home">
+        <span class="brand-mark" aria-hidden="true">SP</span>
+        <span>Shaya Pourmirza<small>CTO, product, data, AI</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span aria-hidden="true"></span>
+      </button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#focus">Focus</a>
+        <a href="#apps">Apps</a>
+        <a href="#leverage">Leverage</a>
+        <a href="#profile">Profile</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Group CTO at Atida</p>
+          <h1 id="heroTitle">Shaya Pourmirza</h1>
+          <p class="hero-subtitle">
+            Technology executive building the next generation of digital pharmacy:
+            product platforms, data foundations, practical AI, and engineering teams that can scale across markets.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+            <a class="button secondary" href="#apps">Explore apps</a>
+            <a class="button secondary" href="#profile">Profile</a>
+          </div>
+          <p class="hero-note">
+            Based in Eindhoven. Working at the intersection of healthcare operations, customer experience,
+            architecture, data, and AI.
+          </p>
+          <div class="promo-line" aria-label="Promotion topics">
+            <span>Digital pharmacy</span>
+            <span>Multi-market platforms</span>
+            <span>AI transformation</span>
+            <span>Engineering culture</span>
+          </div>
+        </div>
+
+        <div class="hero-strip reveal" aria-label="Profile highlights">
+          <div class="strip-item">
+            <span>Role</span>
+            <strong>Group CTO, Atida</strong>
+          </div>
+          <div class="strip-item">
+            <span>Angle</span>
+            <strong>Business strategy into working technology</strong>
+          </div>
+          <div class="strip-item">
+            <span>Depth</span>
+            <strong>PhD in Information Systems</strong>
+          </div>
+          <div class="strip-item">
+            <span>Focus</span>
+            <strong>Product, data, AI, pharmacy</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="focus">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker">Executive technology profile</p>
+            <h2>Turning complex healthcare technology into momentum.</h2>
+          </div>
+          <p class="lead">
+            I connect the executive agenda to the engineering reality: where the platform should go,
+            what the data needs to support, how AI becomes useful, and how teams keep moving.
+          </p>
+        </div>
+
+        <div class="feature-band">
+          <article class="card feature-card reveal">
+            <div>
+              <h3>Technology leadership with commercial context</h3>
+              <p>
+                Strategy becomes operating rhythm through roadmaps, architecture, hiring,
+                decision loops, and the choices that make platforms stronger.
+              </p>
+              <div class="tag-list">
+                <span class="tag">CTO agenda</span>
+                <span class="tag">Scale-ups</span>
+                <span class="tag">Healthcare tech</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <h3>Useful for</h3>
+            <p>
+              Board-level technology conversations, digital transformation, AI/data strategy,
+              product-platform operating models, engineering leadership, and pharmacy tech.
+            </p>
+            <div class="tag-list" aria-label="Useful for topics">
+              <span class="tag">Strategy</span>
+              <span class="tag">Talks</span>
+              <span class="tag">Advisory</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="signal-grid">
+          <article class="card reveal">
+            <h3>Architecture with product pulse</h3>
+            <p>
+              Systems should be simple enough to operate, adaptable enough to evolve, and direct enough
+              that customers and teams actually feel the improvement.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>AI where it changes throughput</h3>
+            <p>
+              Useful AI is not a demo layer. It works best when paired with clean data, workflow design,
+              and measurable decision loops.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Teams that can move</h3>
+            <p>
+              Strong engineering cultures lower coordination cost: clearer ownership, better feedback,
+              more autonomy, and sharper technical judgment.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Healthcare-grade pragmatism</h3>
+            <p>
+              Pharmacy technology has to respect trust, regulation, data sensitivity, and real-world
+              operations while still moving at product speed.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apps">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker">App catalogue</p>
+            <h2>Small tools, real workflows.</h2>
+          </div>
+          <p class="lead">
+            This is where I collect the apps and experiments I ship for my own work.
+            MyExpense is the first public entry; more tools will sit here over time.
+          </p>
+        </div>
+
+        <div class="catalogue-grid">
+          <article class="app-card reveal">
+            <div>
+              <div class="app-meta">
+                <span>Live</span>
+                <span>Expense automation</span>
+                <span>Google Drive + Gmail</span>
+              </div>
+              <h3>MyExpense</h3>
+              <p>
+                A focused expense workflow for adding receipts, extracting invoice fields with OCR,
+                updating the Excel workbook, storing receipt files, and preparing the approval email draft.
+              </p>
+            </div>
+            <div class="hero-actions" style="margin-top: 24px;">
+              <a class="button primary" href="https://expense.shaya.click/myexpense" target="_blank" rel="noreferrer">Open MyExpense</a>
+              <a class="button secondary" href="https://expense.shaya.click" target="_blank" rel="noreferrer">App domain</a>
+            </div>
+          </article>
+
+          <aside class="card coming-card reveal" aria-label="Upcoming apps">
+            <h3>Coming next</h3>
+            <div class="mini-app">
+              <strong>Personal operations tools</strong>
+              <span>Small utilities for recurring finance, planning, and admin workflows.</span>
+            </div>
+            <div class="mini-app">
+              <strong>Decision dashboards</strong>
+              <span>Lightweight dashboards and reports around data quality, forecasts, and operating metrics.</span>
+            </div>
+            <div class="mini-app">
+              <strong>AI assistants</strong>
+              <span>Workflow-specific assistants that compress tedious work without losing control.</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="leverage">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker">Where I create leverage</p>
+            <h2>Platforms, data, AI, teams.</h2>
+          </div>
+          <p class="lead">
+            The best technology leaders create leverage in multiple systems at once:
+            the product customers touch, the data teams trust, the AI that changes throughput,
+            and the culture that keeps execution honest.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card reveal">
+            <div class="work-number">01</div>
+            <div>
+              <h3>Platform clarity</h3>
+              <p>Make the technical landscape easier to reason about, fund, change, and operate across markets.</p>
+              <div class="tag-list"><span class="tag">Architecture</span><span class="tag">APIs</span><span class="tag">Reliability</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-number">02</div>
+            <div>
+              <h3>Data as leverage</h3>
+              <p>Turn fragmented operational signals into product decisions, executive visibility, and sharper execution.</p>
+              <div class="tag-list"><span class="tag">Foundations</span><span class="tag">Quality</span><span class="tag">Metrics</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-number">03</div>
+            <div>
+              <h3>Practical AI</h3>
+              <p>Use AI to compress tedious work, raise service quality, and create credible new product surfaces.</p>
+              <div class="tag-list"><span class="tag">Automation</span><span class="tag">Assistants</span><span class="tag">OCR</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="profile">
+      <div class="section-inner">
+        <div class="timeline">
+          <aside class="timeline-aside reveal" aria-label="Profile summary">
+            <div class="portrait-card">
+              <img src="/assets/shaya-atida-headshot.jpg" alt="Shaya Pourmirza">
+              <div class="mini-profile">
+                <strong>Shaya Pourmirza</strong>
+                <span>Group CTO at Atida. PhD in Information Systems. Based in Eindhoven.</span>
+              </div>
+            </div>
+            <a class="button dark" href="https://github.com/shoopi" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button light" href="https://www.researchgate.net/profile/Shaya-Pourmirza" target="_blank" rel="noreferrer">ResearchGate</a>
+          </aside>
+
+          <div>
+            <div class="section-head reveal" style="grid-template-columns: 1fr; gap: 16px; margin-bottom: 24px;">
+              <div>
+                <p class="section-kicker">Profile</p>
+                <h2>From adaptive process research to executive technology leadership.</h2>
+              </div>
+              <p class="lead">
+                The through-line is adaptive systems: business processes, collaborative networks,
+                digital platforms, and organizations that can change without losing coherence.
+              </p>
+            </div>
+
+            <div class="timeline-list">
+              <article class="timeline-item reveal">
+                <div class="timeline-date">Now</div>
+                <div>
+                  <h3>Group CTO at Atida</h3>
+                  <p>
+                    Technology leadership across Atida, connecting platform work, product capability,
+                    data foundations, AI, and multi-market execution.
+                  </p>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <div class="timeline-date">Research</div>
+                <div>
+                  <h3>PhD in Information Systems</h3>
+                  <p>
+                    Academic work around business process management systems, runtime adaptation,
+                    process orchestration, and event-driven applications.
+                  </p>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <div class="timeline-date">Open work</div>
+                <div>
+                  <h3>Public prototypes and process tooling</h3>
+                  <p>
+                    Older public projects include process mining, Petri net/BPMN transformation,
+                    GET Service prototypes, and collaborative learning experiments.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="proof-row reveal" aria-label="Public profile signals">
+              <div class="proof">
+                <strong>CTO</strong>
+                <span>Group technology leadership at Atida</span>
+              </div>
+              <div class="proof">
+                <strong>PhD</strong>
+                <span>Information Systems background</span>
+              </div>
+              <div class="proof">
+                <strong>15</strong>
+                <span>ResearchGate-listed publications</span>
+              </div>
+              <div class="proof">
+                <strong>10</strong>
+                <span>Public GitHub repositories</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-inner">
+        <div class="contact-band reveal">
+          <div>
+            <p class="section-kicker" style="color: rgba(255,255,255,.74);">Connect</p>
+            <h2>For technology, product, data, AI, and pharmacy platform conversations.</h2>
+          </div>
+          <div class="contact-actions">
+            <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+            <a class="button secondary" href="#apps">View apps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Shaya Pourmirza</span>
+      <span>Personal promo page and app catalogue for <a href="https://shaya.click">shaya.click</a>.</span>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('siteHeader');
+    const menuToggle = document.getElementById('menuToggle');
+    const revealItems = [...document.querySelectorAll('.reveal')];
+
+    function updateHeader() {
+      header.classList.toggle('is-scrolled', window.scrollY > 14);
+    }
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = document.body.classList.toggle('menu-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+
+    revealItems.forEach((item) => observer.observe(item));
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+  </script>
+</body>
+</html>
