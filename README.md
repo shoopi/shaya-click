@@ -1,6 +1,6 @@
 # shaya.click
 
-Static personal promo page and app catalogue for Shaya Pourmirza.
+Static senior profile and technical workbench for Shaya Pourmirza.
 
 ## Live Site
 
@@ -21,7 +21,7 @@ The `CNAME` file sets the GitHub Pages custom domain to:
 shaya.click
 ```
 
-DNS still needs to point `shaya.click` to GitHub Pages. For an apex domain, GitHub expects `A` records for:
+DNS points `shaya.click` to GitHub Pages. For an apex domain, GitHub expects `A` records for:
 
 ```text
 185.199.108.153
@@ -36,4 +36,4 @@ Recommended `www` record:
 www CNAME shoopi.github.io
 ```
 
-After DNS updates, GitHub Pages can issue the HTTPS certificate and serve `https://shaya.click`.
+GitHub Pages serves the site over HTTPS at `https://shaya.click`.
