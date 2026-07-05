@@ -6,6 +6,14 @@ Static senior technology profile for Shaya Pourmirza.
 
 - Production domain: <https://shaya.click>
 
+## SEO and Legal Surface
+
+- `index.html` is the canonical, indexable official profile.
+- `sitemap.xml` lists the canonical profile URL and key profile images.
+- `robots.txt` allows crawling and points crawlers to the sitemap.
+- `privacy.html`, `terms.html` and `accessibility.html` are linked from the footer and marked `noindex,follow`.
+- `llms.txt` provides a compact machine-readable profile summary for AI and agent crawlers.
+
 ## Deployment
 
 This repository deploys to GitHub Pages automatically on every push to `main`.
