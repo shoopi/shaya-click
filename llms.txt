@@ -28,6 +28,6 @@ Featured book:
 
 Legal and usage notes:
 - This is a personal professional profile, not an employer statement, commercial offer, recruitment statement, employment availability statement or professional advice.
-- The site does not intentionally set first-party cookies and does not use analytics scripts, advertising pixels or visitor profiling.
+- The site does not intentionally set first-party cookies, advertising pixels or visitor profiling. It uses Simple Analytics for anonymous aggregate traffic statistics.
 - Legal notice: https://shaya.click/terms.html
 - Privacy notice: https://shaya.click/privacy.html

@@ -11,8 +11,9 @@ Static senior technology profile for Shaya Pourmirza.
 - `index.html` is the canonical, indexable official profile.
 - `sitemap.xml` lists the canonical profile URL and key profile images.
 - `robots.txt` allows crawling and points crawlers to the sitemap.
-- `privacy.html`, `terms.html` and `accessibility.html` are linked from the footer and marked `noindex,follow`.
+- `privacy.html`, `terms.html` and `accessibility.html` are linked from the footer and marked `index,follow`.
 - `llms.txt` provides a compact machine-readable profile summary for AI and agent crawlers.
+- Simple Analytics is included for cookie-free, anonymous aggregate traffic statistics.
 
 ## Deployment
 
