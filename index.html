@@ -8,7 +8,7 @@
   <meta name="description" content="Shaya Pourmirza is Group CTO at Atida, an AI, data and digital pharmacy technology leader with research roots in business process management and information systems.">
   <meta name="author" content="Shaya Pourmirza">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="keywords" content="Shaya Pourmirza, Pourmirza, Shaya, CTO, Group CTO, AI leader, data leader, digital pharmacy, Atida, information systems researcher">
+  <meta name="keywords" content="Shaya Pourmirza, Pourmirza, Shaya, CTO, Group CTO, AI leader, data leader, digital pharmacy, Atida, information systems researcher, Runtime Party Switch, inter-organizational collaboration, business process management, service-oriented computing">
   <meta property="og:title" content="Shaya Pourmirza - Group CTO, AI, Data and Digital Pharmacy">
   <meta property="og:description" content="Senior technology profile for Shaya Pourmirza: Group CTO at Atida, AI and data leader, digital pharmacy executive, information systems researcher, author and public speaker.">
   <meta property="og:image" content="https://shaya.click/assets/shaya-atida-headshot.jpg">
@@ -48,6 +48,9 @@
             "Healthcare technology",
             "Information systems research",
             "Business process management",
+            "Inter-organizational collaboration",
+            "Runtime party switch",
+            "Service-Oriented Computing",
             "Engineering leadership",
             "Product platforms"
           ],
@@ -65,6 +68,22 @@
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "PhD",
             "name": "PhD in Information Systems"
+          },
+          "workExample": {
+            "@type": "Book",
+            "name": "Runtime Party Switch in an Inter-Organizational Collaboration",
+            "url": "https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf",
+            "author": {
+              "@id": "https://shaya.click/#shaya-pourmirza"
+            },
+            "datePublished": "2016",
+            "isbn": "978-94-6233-431-1",
+            "about": [
+              "Inter-organizational collaboration",
+              "Business Process Management Systems",
+              "Runtime party switch",
+              "Service-oriented computing"
+            ]
           }
         },
         {
@@ -749,6 +768,32 @@
       margin-top: 30px;
     }
 
+    .featured-work {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      border: 1px solid rgba(0, 143, 139, .24);
+      border-radius: var(--radius);
+      padding: 24px;
+      background:
+        linear-gradient(135deg, rgba(0, 143, 139, .1), rgba(47, 108, 187, .08) 52%, rgba(255, 255, 255, .98));
+      box-shadow: 0 16px 40px rgba(16, 24, 32, .08);
+    }
+
+    .featured-work h3 {
+      margin: 0;
+      max-width: 790px;
+      font-size: clamp(1.55rem, 2.6vw, 2.55rem);
+      line-height: 1.03;
+      letter-spacing: 0;
+    }
+
+    .featured-work .button {
+      white-space: nowrap;
+    }
+
     .proof {
       min-height: 128px;
       padding: 18px;
@@ -885,6 +930,15 @@
         position: static;
         grid-template-columns: 220px minmax(0, 1fr);
         align-items: stretch;
+      }
+
+      .featured-work {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .featured-work .button {
+        justify-self: start;
       }
 
       .portrait-card img {
@@ -1043,6 +1097,14 @@
       .contact-actions .button {
         width: 100%;
       }
+
+      .featured-work {
+        padding: 20px;
+      }
+
+      .featured-work .button {
+        width: 100%;
+      }
     }
 
     @media (max-width: 380px) {
@@ -1100,6 +1162,7 @@
           <div class="hero-actions">
             <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="noreferrer">LinkedIn profile</a>
             <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf" target="_blank" rel="noreferrer">Runtime Party Switch book</a>
           </div>
           <div class="promo-line" aria-label="Core domains">
             <span>Group CTO</span>
@@ -1298,6 +1361,7 @@
                   <h3>Author, reviewer and academic contributor</h3>
                   <ul class="micro-list">
                     <li>15+ peer-reviewed international publications.</li>
+                    <li>Book: Runtime Party Switch in an Inter-Organizational Collaboration.</li>
                     <li>Author of cited work on architecture of business process management systems.</li>
                     <li>Reviewer and committee work across service-oriented, enterprise and cooperative information systems venues.</li>
                   </ul>
@@ -1316,6 +1380,19 @@
                 </div>
               </article>
             </div>
+
+            <article class="featured-work reveal" aria-labelledby="runtimeBookTitle">
+              <div>
+                <p class="section-kicker">Featured book</p>
+                <h3 id="runtimeBookTitle">Runtime Party Switch in an Inter-Organizational Collaboration</h3>
+                <ul class="micro-list">
+                  <li>PhD book and dissertation from Eindhoven University of Technology.</li>
+                  <li>Focus: replacing a party during B2B collaboration at runtime while preserving autonomy and state continuity.</li>
+                  <li>Research bridge between BPM systems, service-oriented architecture and adaptive enterprise systems.</li>
+                </ul>
+              </div>
+              <a class="button dark" href="https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf" target="_blank" rel="noreferrer">Read the book</a>
+            </article>
 
             <div class="proof-row reveal" aria-label="Public profile signals">
               <div class="proof">
@@ -1381,6 +1458,7 @@
             <h3>Adaptive systems and process research</h3>
             <ul class="micro-list">
               <li>Business process management systems.</li>
+              <li>Runtime party switching in inter-organizational collaboration.</li>
               <li>Service-oriented and event-driven architectures.</li>
               <li>Research translated into practical executive technology judgment.</li>
             </ul>
