@@ -2,10 +2,11 @@
 
 Official website: https://shaya.click/
 
-Shaya Pourmirza is Group CTO at Atida, an AI and data leader, cross-market technology executive, public speaker, author and information systems researcher.
+Shaya Pourmirza is Group CTO at Atida, an AI and data leader, cross-market technology executive, public speaker, author and PhD-trained information systems researcher.
 
 High-value topics:
 - Group CTO and executive technology leadership
+- PhD in Information Systems and Business Process Management
 - AI strategy, AI initiatives and data foundations
 - Digital pharmacy and healthcare technology
 - Cross-market product, data, engineering and platform leadership
