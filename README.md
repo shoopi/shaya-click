@@ -1,11 +1,10 @@
 # shaya.click
 
-Static senior profile and technical workbench for Shaya Pourmirza.
+Static senior technology profile for Shaya Pourmirza.
 
 ## Live Site
 
 - Production domain: <https://shaya.click>
-- App catalogue first entry: <https://expense.shaya.click/myexpense>
 
 ## Deployment
 

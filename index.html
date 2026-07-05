@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#101820">
   <title>Shaya Pourmirza | Group CTO, AI, Data &amp; Digital Pharmacy</title>
-  <meta name="description" content="Shaya Pourmirza is Group CTO at Atida, an AI, data and digital pharmacy technology leader with research roots in adaptive information systems.">
+  <meta name="description" content="Shaya Pourmirza is Group CTO at Atida, an AI, data and digital pharmacy technology leader with research roots in business process management and information systems.">
   <meta name="author" content="Shaya Pourmirza">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="keywords" content="Shaya Pourmirza, Pourmirza, Shaya, CTO, Group CTO, AI leader, data leader, digital pharmacy, Atida, information systems researcher">
   <meta property="og:title" content="Shaya Pourmirza - Group CTO, AI, Data and Digital Pharmacy">
-  <meta property="og:description" content="Senior technology profile for Shaya Pourmirza: Group CTO at Atida, AI and data leader, digital pharmacy executive, information systems researcher and public speaker.">
+  <meta property="og:description" content="Senior technology profile for Shaya Pourmirza: Group CTO at Atida, AI and data leader, digital pharmacy executive, information systems researcher, author and public speaker.">
   <meta property="og:image" content="https://shaya.click/assets/shaya-atida-headshot.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shaya.click/">
@@ -39,7 +39,7 @@
             "@type": "Organization",
             "name": "Atida"
           },
-          "description": "Shaya Pourmirza is Group CTO at Atida, a technology executive working across AI, data, product platforms, digital pharmacy and adaptive information systems.",
+          "description": "Shaya Pourmirza is Group CTO at Atida, a technology executive working across AI, data, product platforms, digital pharmacy, business process management and information systems.",
           "knowsAbout": [
             "CTO leadership",
             "AI strategy",
@@ -53,9 +53,14 @@
           ],
           "sameAs": [
             "https://nl.linkedin.com/in/shayapourmirza",
+            "https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en",
             "https://github.com/shoopi",
             "https://www.researchgate.net/profile/Shaya-Pourmirza"
           ],
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Eindhoven University of Technology"
+          },
           "hasCredential": {
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "PhD",
@@ -71,7 +76,7 @@
           "publisher": {
             "@id": "https://shaya.click/#shaya-pourmirza"
           },
-          "description": "The official profile of Shaya Pourmirza, Group CTO, AI and data leader, digital pharmacy technology executive and information systems researcher."
+          "description": "The official profile of Shaya Pourmirza, Group CTO, AI and data leader, digital pharmacy technology executive, public speaker and information systems researcher."
         }
       ]
     }
@@ -406,14 +411,6 @@
       background: #fff;
     }
 
-    .hero-note {
-      max-width: 570px;
-      margin-top: 16px;
-      color: rgba(255, 255, 255, .66);
-      font-size: .92rem;
-      line-height: 1.55;
-    }
-
     .promo-line {
       margin-top: 18px;
       display: flex;
@@ -517,8 +514,8 @@
     }
 
     .feature-band,
-    .catalogue-grid,
-    .signal-grid {
+    .signal-grid,
+    .evidence-grid {
       display: grid;
       gap: 14px;
     }
@@ -530,6 +527,11 @@
 
     .signal-grid {
       grid-template-columns: 1fr 1fr;
+    }
+
+    .evidence-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 24px;
     }
 
     .card {
@@ -558,7 +560,6 @@
     }
 
     .card h3,
-    .app-card h3,
     .work-card h3,
     .timeline-item h3 {
       margin: 0;
@@ -567,7 +568,6 @@
     }
 
     .card p,
-    .app-card p,
     .work-card p,
     .timeline-item p {
       margin: 12px 0 0;
@@ -626,92 +626,15 @@
     }
 
     .dark .micro-list li,
-    .work-card .micro-list li {
+    .work-card .micro-list li,
+    .feature-card .micro-list li {
       color: rgba(255, 255, 255, .7);
     }
 
     .dark .micro-list li::before,
-    .work-card .micro-list li::before {
+    .work-card .micro-list li::before,
+    .feature-card .micro-list li::before {
       background: #65d2cd;
-    }
-
-    .catalogue-grid {
-      grid-template-columns: minmax(0, 1.08fr) minmax(280px, .62fr);
-      align-items: stretch;
-    }
-
-    .app-card {
-      min-height: 360px;
-      position: relative;
-      display: grid;
-      align-content: space-between;
-      border-radius: var(--radius);
-      padding: 24px;
-      color: #fff;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, .16);
-      background:
-        linear-gradient(135deg, rgba(0, 143, 139, .94), rgba(16, 24, 32, .94) 55%, rgba(47, 108, 187, .86)),
-        radial-gradient(circle at 82% 22%, rgba(220, 165, 55, .34), transparent 28%);
-      box-shadow: var(--shadow);
-    }
-
-    .app-card::after {
-      content: "";
-      position: absolute;
-      width: 210px;
-      height: 210px;
-      right: 18px;
-      bottom: 18px;
-      border: 1px solid rgba(255, 255, 255, .14);
-      border-radius: 50%;
-    }
-
-    .app-card p {
-      max-width: 680px;
-      color: rgba(255, 255, 255, .74);
-    }
-
-    .app-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-
-    .app-meta span {
-      padding: 7px 9px;
-      border-radius: 999px;
-      color: rgba(255, 255, 255, .84);
-      border: 1px solid rgba(255, 255, 255, .2);
-      background: rgba(255, 255, 255, .08);
-      font-size: .78rem;
-      font-weight: 820;
-    }
-
-    .coming-card {
-      display: grid;
-      gap: 12px;
-    }
-
-    .mini-app {
-      min-height: 104px;
-      border: 1px dashed rgba(16, 24, 32, .22);
-      border-radius: var(--radius);
-      padding: 16px;
-      background: rgba(255, 255, 255, .62);
-    }
-
-    .mini-app strong {
-      display: block;
-    }
-
-    .mini-app span {
-      display: block;
-      margin-top: 7px;
-      color: var(--muted);
-      line-height: 1.46;
-      font-size: .94rem;
     }
 
     .work-grid {
@@ -800,7 +723,7 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 110px minmax(0, 1fr);
+      grid-template-columns: 132px minmax(0, 1fr);
       gap: 22px;
       padding: 24px 0;
       border-top: 1px solid var(--line);
@@ -846,6 +769,29 @@
       color: var(--muted);
       line-height: 1.35;
       font-weight: 720;
+    }
+
+    .evidence-card {
+      min-height: 138px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: #fff;
+      box-shadow: 0 12px 34px rgba(16, 24, 32, .05);
+    }
+
+    .evidence-card strong {
+      display: block;
+      font-size: clamp(1.7rem, 3vw, 2.55rem);
+      line-height: .96;
+    }
+
+    .evidence-card span {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      line-height: 1.38;
+      font-weight: 760;
     }
 
     .contact-band {
@@ -912,7 +858,6 @@
 
       .hero-strip,
       .feature-band,
-      .catalogue-grid,
       .section-head,
       .timeline,
       .contact-band {
@@ -922,7 +867,8 @@
       .hero-strip,
       .signal-grid,
       .work-grid,
-      .proof-row {
+      .proof-row,
+      .evidence-grid {
         grid-template-columns: 1fr 1fr;
       }
 
@@ -1031,11 +977,6 @@
         flex-basis: 100%;
       }
 
-      .hero-note {
-        margin-top: 12px;
-        font-size: .88rem;
-      }
-
       .promo-line {
         margin-top: 12px;
         gap: 6px;
@@ -1049,6 +990,7 @@
       .signal-grid,
       .work-grid,
       .proof-row,
+      .evidence-grid,
       .timeline-aside {
         grid-template-columns: 1fr;
       }
@@ -1137,11 +1079,10 @@
         <span aria-hidden="true"></span>
       </button>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#focus">Leadership</a>
-        <a href="#leverage">AI &amp; Data</a>
+        <a href="#focus">Impact</a>
+        <a href="#leverage">Systems</a>
         <a href="#profile">Research</a>
         <a href="#speaking">Speaking</a>
-        <a href="#apps">Workbench</a>
       </nav>
     </div>
   </header>
@@ -1153,42 +1094,38 @@
           <p class="eyebrow">Group CTO at Atida</p>
           <h1 id="heroTitle">Shaya Pourmirza</h1>
           <p class="hero-subtitle">
-            <strong>Group CTO, AI and data leader, digital pharmacy technology executive, and information systems researcher.</strong>
-            Shaya Pourmirza works at the level where strategy, architecture, product platforms, data foundations, AI, and engineering culture become one operating system.
+            <strong>Technology executive, AI and data leader, and information systems researcher.</strong>
+            Strategy, platforms, data, AI, product and engineering - turned into operating leverage.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="noreferrer">LinkedIn profile</a>
-            <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza" target="_blank" rel="noreferrer">Research profile</a>
-            <a class="button secondary" href="#speaking">Speaking themes</a>
+            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
           </div>
-          <p class="hero-note">
-            A senior technology profile for searches around Shaya Pourmirza, Group CTO leadership, AI and data strategy, and research-led digital pharmacy platforms.
-          </p>
           <div class="promo-line" aria-label="Core domains">
             <span>Group CTO</span>
-            <span>AI and data strategy</span>
+            <span>AI + data</span>
             <span>Digital pharmacy</span>
-            <span>Adaptive information systems</span>
-            <span>Public speaking</span>
+            <span>MACH architecture</span>
+            <span>Business process research</span>
           </div>
         </div>
 
         <div class="hero-strip reveal" aria-label="Profile highlights">
           <div class="strip-item">
-            <span>Role</span>
-            <strong>Group CTO, Atida</strong>
+            <span>Experience</span>
+            <strong>15+ years in data, software and IT</strong>
           </div>
           <div class="strip-item">
             <span>Leadership</span>
-            <strong>Enterprise platforms, product and engineering</strong>
+            <strong>70+ technologists across EU teams</strong>
           </div>
           <div class="strip-item">
             <span>Research</span>
-            <strong>PhD in Information Systems</strong>
+            <strong>15+ peer-reviewed publications</strong>
           </div>
           <div class="strip-item">
-            <span>Domain</span>
-            <strong>AI, data, healthcare tech, adaptive systems</strong>
+            <span>Public Signal</span>
+            <strong>Speaker, panelist, reviewer, author</strong>
           </div>
         </div>
       </div>
@@ -1198,70 +1135,59 @@
       <div class="section-inner">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker">Executive technology leadership</p>
-            <h2>A CTO profile for systems that matter.</h2>
+            <p class="section-kicker">Executive technology impact</p>
+            <h2>Business strategy, expressed as technology systems.</h2>
           </div>
           <p class="lead">
-            Shaya Pourmirza operates where technology strategy meets organizational execution: clarifying platforms, data, AI, product and engineering systems for large, regulated, multi-market environments.
+            Group CTO, AI and data leader, digital pharmacy executive, and PhD-trained information systems researcher.
           </p>
         </div>
 
         <div class="feature-band">
           <article class="card feature-card reveal">
             <div>
-              <h3>Group-level technology judgment</h3>
-              <p>
-                The work is not isolated tooling. It is the operating model, architecture, data foundation and engineering culture that let a large organisation move with clarity.
-              </p>
+              <h3>CTO-level operating leverage</h3>
+              <ul class="micro-list">
+                <li>Technology strategy and roadmap aligned to business goals.</li>
+                <li>Multi-market eCommerce and data platforms.</li>
+                <li>Architecture choices that simplify growth, cost and execution.</li>
+              </ul>
               <div class="tag-list">
                 <span class="tag">CTO agenda</span>
                 <span class="tag">Enterprise platforms</span>
-                <span class="tag">Healthcare technology</span>
+                <span class="tag">Digital pharmacy</span>
               </div>
             </div>
           </article>
 
           <article class="card reveal">
-            <h3>Public executive signal</h3>
-            <p>
-              Shaya Pourmirza is presented here as a senior technology leader: Group CTO, AI and data strategist, digital pharmacy executive, and researcher in adaptive information systems.
-            </p>
+            <h3>Business-facing technology leadership</h3>
             <ul class="micro-list">
-              <li>Board-level technology and AI conversations.</li>
-              <li>Digital product, data and platform operating models.</li>
-              <li>Research-led thinking on adaptive systems and process automation.</li>
+              <li>Budget discipline, investment clarity and vendor strategy.</li>
+              <li>M&amp;A technology due diligence and integration roadmaps.</li>
+              <li>Product, data and engineering teams built around ownership.</li>
+              <li>Public communication on architecture, data and transformation.</li>
             </ul>
           </article>
         </div>
 
-        <div class="signal-grid">
-          <article class="card reveal">
-            <h3>Enterprise technology strategy</h3>
-            <p>
-              Translate business direction into platform choices, operating rhythms, capability maps, investment priorities and accountable engineering execution.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <h3>AI and data foundations</h3>
-            <p>
-              Treat AI as a system problem: clean data, clear workflows, measurable decisions, responsible deployment and teams who understand the limits.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <h3>Digital pharmacy and regulated commerce</h3>
-            <p>
-              Build technology in domains where trust, compliance, customer experience, logistics and commercial performance all have to work at once.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <h3>Engineering operating model</h3>
-            <p>
-              Shape teams around ownership, technical judgment, product context and the ability to move quickly without turning complexity into noise.
-            </p>
-          </article>
+        <div class="evidence-grid reveal" aria-label="Senior profile proof points">
+          <div class="evidence-card">
+            <strong>15+</strong>
+            <span>years in data, software development and IT</span>
+          </div>
+          <div class="evidence-card">
+            <strong>8+</strong>
+            <span>years of technology leadership across product and data</span>
+          </div>
+          <div class="evidence-card">
+            <strong>70+</strong>
+            <span>technology team members scaled across European countries</span>
+          </div>
+          <div class="evidence-card">
+            <strong>290+</strong>
+            <span>research citations across the publication record</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1270,11 +1196,11 @@
       <div class="section-inner">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker">AI, data and platform leverage</p>
-            <h2>From research-grade thinking to production-grade systems.</h2>
+            <p class="section-kicker">Technology systems</p>
+            <h2>Platforms, data, AI, teams.</h2>
           </div>
           <p class="lead">
-            The strongest CTO work creates leverage across multiple systems at once: the platform customers touch, the data leaders trust, the AI that changes throughput, and the culture that keeps execution honest.
+            Board-friendly technology themes: where architecture becomes business capability, and where data and AI become operational advantage.
           </p>
         </div>
 
@@ -1282,27 +1208,36 @@
           <article class="work-card reveal">
             <div class="work-number">01</div>
             <div>
-              <h3>Platform strategy for large organisations</h3>
-              <p>Make the technical landscape easier to reason about, fund, change and operate across countries, products and teams.</p>
-              <div class="tag-list"><span class="tag">Architecture</span><span class="tag">Reliability</span><span class="tag">Scale</span></div>
+              <h3>Composable enterprise platforms</h3>
+              <ul class="micro-list">
+                <li>MACH architecture and API-first thinking.</li>
+                <li>Cloud-native, headless and multi-market commerce.</li>
+                <li>Legacy phase-out without losing business continuity.</li>
+              </ul>
             </div>
           </article>
 
           <article class="work-card reveal">
             <div class="work-number">02</div>
             <div>
-              <h3>Data foundations and decision intelligence</h3>
-              <p>Turn fragmented operational signals into trusted metrics, executive visibility, product insight and better daily decisions.</p>
-              <div class="tag-list"><span class="tag">Data quality</span><span class="tag">Metrics</span><span class="tag">Forecasts</span></div>
+              <h3>Data and AI as operating capability</h3>
+              <ul class="micro-list">
+                <li>Data platforms, governance and trusted metrics.</li>
+                <li>AI tied to workflows, decisions and measurable throughput.</li>
+                <li>Analytics, forecasting and executive visibility.</li>
+              </ul>
             </div>
           </article>
 
           <article class="work-card reveal">
             <div class="work-number">03</div>
             <div>
-              <h3>AI as operational capability</h3>
-              <p>Move beyond demos into AI systems that compress tedious work, improve service quality and create credible product surfaces.</p>
-              <div class="tag-list"><span class="tag">Automation</span><span class="tag">Assistants</span><span class="tag">Decision loops</span></div>
+              <h3>Engineering organizations that scale</h3>
+              <ul class="micro-list">
+                <li>Team design, technical ownership and delivery discipline.</li>
+                <li>Stakeholder clarity across business, product and engineering.</li>
+                <li>Vendor, budget and integration decisions with executive context.</li>
+              </ul>
             </div>
           </article>
         </div>
@@ -1317,10 +1252,10 @@
               <img src="/assets/shaya-atida-headshot.jpg" alt="Shaya Pourmirza, Group CTO at Atida">
               <div class="mini-profile">
                 <strong>Shaya Pourmirza</strong>
-                <span>Group CTO at Atida. PhD in Information Systems. AI, data, product platforms and digital pharmacy.</span>
+                <span>Group CTO at Atida. PhD in Business Process Management and Information Systems.</span>
               </div>
             </div>
-            <a class="button dark" href="https://github.com/shoopi" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button dark" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
             <a class="button light" href="https://www.researchgate.net/profile/Shaya-Pourmirza" target="_blank" rel="noreferrer">ResearchGate</a>
           </aside>
 
@@ -1328,11 +1263,8 @@
             <div class="section-head reveal" style="grid-template-columns: 1fr; gap: 16px; margin-bottom: 24px;">
               <div>
                 <p class="section-kicker">Research and executive profile</p>
-                <h2>Adaptive systems, from academic research to group CTO execution.</h2>
+                <h2>Research depth behind the CTO signal.</h2>
               </div>
-              <p class="lead">
-                The through-line is adaptive systems: business processes, collaborative networks, digital platforms, data foundations and organizations that can change without losing coherence.
-              </p>
             </div>
 
             <div class="timeline-list">
@@ -1340,59 +1272,67 @@
                 <div class="timeline-date">Now</div>
                 <div>
                   <h3>Group CTO at Atida</h3>
-                  <p>
-                    Technology leadership across Atida, connecting platform direction, product capability, data foundations, AI and multi-market execution in digital pharmacy.
-                  </p>
+                  <ul class="micro-list">
+                    <li>Technology strategy, roadmap and operating model.</li>
+                    <li>eCommerce and data platforms across brands and regions.</li>
+                    <li>Technology team scaled across multiple European countries.</li>
+                  </ul>
                 </div>
               </article>
 
               <article class="timeline-item reveal">
-                <div class="timeline-date">Research</div>
+                <div class="timeline-date">Scholar</div>
                 <div>
-                  <h3>PhD in Information Systems</h3>
-                  <p>
-                    Academic work around business process management systems, runtime adaptation, process orchestration, collaborative networks and event-driven applications.
-                  </p>
+                  <h3>Business Process Management and Information Systems</h3>
+                  <ul class="micro-list">
+                    <li>Google Scholar profile: Eindhoven University of Technology.</li>
+                    <li>Research areas include Business Process Management, Information Systems and Service-Oriented Computing.</li>
+                    <li>PhD from Eindhoven University of Technology.</li>
+                  </ul>
                 </div>
               </article>
 
               <article class="timeline-item reveal">
-                <div class="timeline-date">Public voice</div>
+                <div class="timeline-date">Publications</div>
                 <div>
-                  <h3>Research, speaking and senior technology thinking</h3>
-                  <p>
-                    Public profile across LinkedIn, ResearchGate and GitHub, with themes that connect information systems research to practical CTO work in AI, data and digital health.
-                  </p>
+                  <h3>Author, reviewer and academic contributor</h3>
+                  <ul class="micro-list">
+                    <li>15+ peer-reviewed international publications.</li>
+                    <li>Author of cited work on architecture of business process management systems.</li>
+                    <li>Reviewer and committee work across service-oriented, enterprise and cooperative information systems venues.</li>
+                  </ul>
                 </div>
               </article>
 
               <article class="timeline-item reveal">
-                <div class="timeline-date">Artifacts</div>
+                <div class="timeline-date">Mentorship</div>
                 <div>
-                  <h3>Technical work and process tooling</h3>
-                  <p>
-                    Public technical history includes process mining, Petri net and BPMN transformation, service prototypes, collaborative learning experiments and practical workflow automation.
-                  </p>
+                  <h3>Teaching, supervision and technical community</h3>
+                  <ul class="micro-list">
+                    <li>Supervised 30+ bachelor and master students.</li>
+                    <li>Teaching and research assistant experience at TU/e and Shiraz University of Technology.</li>
+                    <li>Public speaker and panelist in data, product and microservice-related events.</li>
+                  </ul>
                 </div>
               </article>
             </div>
 
             <div class="proof-row reveal" aria-label="Public profile signals">
               <div class="proof">
-                <strong>Group CTO</strong>
-                <span>Technology leadership at Atida</span>
+                <strong>15+</strong>
+                <span>peer-reviewed international publications</span>
               </div>
               <div class="proof">
-                <strong>AI/Data</strong>
-                <span>Strategy, foundations and decision systems</span>
+                <strong>8</strong>
+                <span>h-index across the publication record</span>
               </div>
               <div class="proof">
-                <strong>PhD</strong>
-                <span>Information Systems research background</span>
+                <strong>30+</strong>
+                <span>students supervised in software and data engineering</span>
               </div>
               <div class="proof">
-                <strong>Public voice</strong>
-                <span>Speaking themes, research profile and technical artifacts</span>
+                <strong>TU/e</strong>
+                <span>PhD in BPM and Information Systems</span>
               </div>
             </div>
           </div>
@@ -1405,91 +1345,46 @@
         <div class="section-head reveal">
           <div>
             <p class="section-kicker">Public speaking and thought leadership</p>
-            <h2>Clear positions on AI, data, platforms and digital health.</h2>
+            <h2>Executive themes for audiences that care about outcomes.</h2>
           </div>
-          <p class="lead">
-            The useful public themes are executive, technical and research-aware: what leaders should understand before they fund AI, reorganize data, modernize platforms or scale digital health systems.
-          </p>
         </div>
 
         <div class="signal-grid">
           <article class="card reveal">
-            <h3>What senior leaders get wrong about AI transformation</h3>
-            <p>
-              AI value depends on workflow design, data quality, operating discipline and trust. The model is only one part of the system.
-            </p>
+            <h3>AI beyond demos</h3>
+            <ul class="micro-list">
+              <li>Workflow design before model selection.</li>
+              <li>Data quality as the AI multiplier.</li>
+              <li>Trust, governance and measurable decision loops.</li>
+            </ul>
           </article>
 
           <article class="card reveal">
-            <h3>Why data foundations are a CTO topic</h3>
-            <p>
-              Data quality is not a reporting cleanup exercise. It shapes product decisions, automation, forecasting, accountability and executive confidence.
-            </p>
+            <h3>MACH, microservices and platform strategy</h3>
+            <ul class="micro-list">
+              <li>Composable architecture as business optionality.</li>
+              <li>Headless commerce and API-first product platforms.</li>
+              <li>Public speaking and panels in microservice-related events.</li>
+            </ul>
           </article>
 
           <article class="card reveal">
-            <h3>Digital pharmacy as a technology operating system</h3>
-            <p>
-              Pharmacy platforms need product thinking, safety, regulatory awareness, logistics, customer experience and resilient engineering in the same room.
-            </p>
+            <h3>Data, product and digital pharmacy</h3>
+            <ul class="micro-list">
+              <li>Real-time analytics and executive dashboards.</li>
+              <li>Commercial platforms with regulated operating constraints.</li>
+              <li>Customer experience, logistics and trust in one system.</li>
+            </ul>
           </article>
 
           <article class="card reveal">
-            <h3>Adaptive systems and the next automation layer</h3>
-            <p>
-              Research in adaptive business processes still matters because modern AI systems need context, orchestration and controlled change.
-            </p>
+            <h3>Adaptive systems and process research</h3>
+            <ul class="micro-list">
+              <li>Business process management systems.</li>
+              <li>Service-oriented and event-driven architectures.</li>
+              <li>Research translated into practical executive technology judgment.</li>
+            </ul>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="apps">
-      <div class="section-inner">
-        <div class="section-head reveal">
-          <div>
-            <p class="section-kicker">Workbench</p>
-            <h2>A practical technical workbench.</h2>
-          </div>
-          <p class="lead">
-            The tools show the same habit at smaller scale: understand the workflow, connect the data, automate the tedious path and ship something useful.
-          </p>
-        </div>
-
-        <div class="catalogue-grid">
-          <article class="app-card reveal">
-            <div>
-              <div class="app-meta">
-                <span>Live</span>
-                <span>Expense automation</span>
-                <span>OCR + workflow</span>
-              </div>
-              <h3>MyExpense</h3>
-              <p>
-                A focused expense workflow for adding receipts, extracting invoice fields with OCR, updating the workbook, storing receipt files and preparing the approval email draft.
-              </p>
-            </div>
-            <div class="hero-actions" style="margin-top: 24px;">
-              <a class="button primary" href="https://expense.shaya.click/myexpense" target="_blank" rel="noreferrer">Open MyExpense</a>
-              <a class="button secondary" href="https://expense.shaya.click" target="_blank" rel="noreferrer">App domain</a>
-            </div>
-          </article>
-
-          <aside class="card coming-card reveal" aria-label="Technical workbench themes">
-            <h3>Technical workbench themes</h3>
-            <div class="mini-app">
-              <strong>Personal operations systems</strong>
-              <span>Workflow utilities for recurring finance, planning and admin processes.</span>
-            </div>
-            <div class="mini-app">
-              <strong>Decision dashboards</strong>
-              <span>Reports around data quality, forecasts, operating metrics and executive visibility.</span>
-            </div>
-            <div class="mini-app">
-              <strong>AI assistants</strong>
-              <span>Workflow-specific assistants that compress tedious work without hiding control.</span>
-            </div>
-          </aside>
         </div>
       </div>
     </section>
@@ -1503,8 +1398,8 @@
           </div>
           <div class="contact-actions">
             <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
             <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza" target="_blank" rel="noreferrer">ResearchGate</a>
-            <a class="button secondary" href="https://github.com/shoopi" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
       </div>
