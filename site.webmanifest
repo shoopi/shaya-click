@@ -1,0 +1,22 @@
+{
+  "name": "Shaya Pourmirza",
+  "short_name": "Shaya Pourmirza",
+  "description": "Official personal site of Shaya Pourmirza, Group CTO, AI and data executive, researcher and public speaker.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7faf9",
+  "theme_color": "#101820",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
