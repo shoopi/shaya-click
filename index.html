@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#101820">
+  <meta name="theme-color" content="#111820">
   <title>Shaya Pourmirza | Group CTO, AI &amp; Data Executive, PhD</title>
   <meta name="description" content="Official personal site of Shaya Pourmirza: Group CTO at Atida, AI and data executive, PhD in Information Systems, researcher, author and public speaker.">
   <meta name="author" content="Shaya Pourmirza">
@@ -182,7 +182,7 @@
           "description": "Official personal site of Shaya Pourmirza: Group CTO at Atida, AI and data executive, public speaker, author and PhD-trained information systems researcher.",
           "inLanguage": "en",
           "dateCreated": "2026-07-05T00:00:00+02:00",
-          "dateModified": "2026-07-06T12:40:24+02:00",
+          "dateModified": "2026-07-06T12:58:52+02:00",
           "isPartOf": {
             "@id": "https://shaya.click/#website"
           },
@@ -209,17 +209,21 @@
   <script>document.documentElement.classList.add('js');</script>
   <style>
     :root {
-      --ink: #101820;
-      --muted: #5a6671;
-      --paper: #f7faf9;
+      --ink: #111820;
+      --slate: #202a34;
+      --muted: #5f6a73;
+      --soft-muted: #8a949d;
+      --paper: #f5f7f6;
       --white: #ffffff;
-      --line: rgba(16, 24, 32, .14);
-      --teal: #008f8b;
-      --teal-dark: #006f70;
-      --coral: #e4563f;
-      --mustard: #dca537;
-      --blue: #2f6cbb;
-      --shadow: 0 22px 60px rgba(16, 24, 32, .14);
+      --line: rgba(17, 24, 32, .12);
+      --line-strong: rgba(17, 24, 32, .2);
+      --accent: #0b6f6a;
+      --accent-deep: #074f4d;
+      --gold: #b18a55;
+      --clay: #a85643;
+      --blue: #2c5f95;
+      --shadow: 0 24px 60px rgba(17, 24, 32, .12);
+      --shadow-soft: 0 14px 34px rgba(17, 24, 32, .08);
       --radius: 8px;
       --max: 1180px;
       color-scheme: light;
@@ -236,12 +240,9 @@
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
-      background:
-        linear-gradient(90deg, rgba(16, 24, 32, .035) 1px, transparent 1px),
-        linear-gradient(180deg, #f7fbfa 0%, #ffffff 44%, #f2f6f7 100%);
-      background-size: 32px 32px, auto;
+      background: linear-gradient(180deg, #f6f8f7 0%, #ffffff 38%, #f2f5f4 100%);
       text-rendering: geometricPrecision;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -270,7 +271,7 @@
       border-radius: var(--radius);
       color: #fff;
       background: var(--ink);
-      font-weight: 850;
+      font-weight: 760;
     }
 
     .skip-link:focus {
@@ -283,16 +284,16 @@
       left: 0;
       right: 0;
       z-index: 20;
-      border-bottom: 1px solid rgba(16, 24, 32, .1);
-      background: rgba(248, 250, 249, .76);
-      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(17, 24, 32, .08);
+      background: rgba(255, 255, 255, .82);
+      backdrop-filter: blur(20px);
       transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
     }
 
     .site-header.is-scrolled {
-      background: rgba(248, 250, 249, .92);
+      background: rgba(255, 255, 255, .94);
       border-color: var(--line);
-      box-shadow: 0 10px 30px rgba(16, 24, 32, .08);
+      box-shadow: 0 10px 30px rgba(17, 24, 32, .06);
     }
 
     .nav-wrap {
@@ -310,18 +311,19 @@
       grid-template-columns: 42px auto;
       align-items: center;
       gap: 12px;
-      font-weight: 930;
+      font-family: "Aptos Display", Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 820;
       letter-spacing: 0;
     }
 
     .brand-mark {
       width: 42px;
       height: 42px;
-      border-radius: 50%;
+      border-radius: 999px;
       overflow: hidden;
-      border: 2px solid rgba(255, 255, 255, .92);
+      border: 2px solid rgba(255, 255, 255, .96);
       background: #fff;
-      box-shadow: 0 8px 18px rgba(16, 24, 32, .16);
+      box-shadow: 0 8px 18px rgba(17, 24, 32, .14);
     }
 
     .brand-mark img {
@@ -336,7 +338,7 @@
       margin-top: 2px;
       color: var(--muted);
       font-size: .72rem;
-      font-weight: 760;
+      font-weight: 680;
     }
 
     .nav-links {
@@ -352,9 +354,9 @@
       gap: 7px;
       padding: 10px 12px;
       border-radius: var(--radius);
-      color: rgba(16, 24, 32, .78);
-      font-size: .92rem;
-      font-weight: 780;
+      color: rgba(17, 24, 32, .72);
+      font-size: .9rem;
+      font-weight: 720;
       transition: background .16s ease, color .16s ease;
     }
 
@@ -362,7 +364,7 @@
     .nav-links a:focus-visible {
       outline: none;
       color: var(--ink);
-      background: rgba(16, 24, 32, .07);
+      background: rgba(17, 24, 32, .06);
     }
 
     .nav-icon,
@@ -377,12 +379,17 @@
       justify-content: center;
       flex: 0 0 auto;
       line-height: 1;
+      font-variant-numeric: tabular-nums;
     }
 
     .nav-icon {
-      width: 1.2em;
-      opacity: .74;
-      font-size: .95em;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      color: var(--accent-deep);
+      background: rgba(11, 111, 106, .08);
+      font-size: .66rem;
+      font-weight: 780;
     }
 
     .menu-toggle {
@@ -391,7 +398,7 @@
       height: 44px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: rgba(255, 255, 255, .72);
+      background: rgba(255, 255, 255, .86);
       color: var(--ink);
       align-items: center;
       justify-content: center;
@@ -431,17 +438,17 @@
     }
 
     .hero {
-      min-height: 88svh;
-      padding: 116px 0 52px;
+      min-height: 84svh;
+      padding: 116px 0 46px;
       display: grid;
       align-items: end;
       position: relative;
       overflow: clip;
       color: #fff;
       background:
-        radial-gradient(circle at 76% 18%, rgba(220, 165, 55, .28), transparent 28%),
-        linear-gradient(90deg, rgba(16, 24, 32, .98) 0%, rgba(16, 24, 32, .9) 38%, rgba(16, 24, 32, .42) 66%, rgba(16, 24, 32, .16) 100%),
-        linear-gradient(180deg, rgba(16, 24, 32, .08), rgba(16, 24, 32, .46)),
+        linear-gradient(90deg, rgba(17, 24, 32, .98) 0%, rgba(17, 24, 32, .9) 42%, rgba(17, 24, 32, .46) 68%, rgba(17, 24, 32, .18) 100%),
+        radial-gradient(circle at 76% 16%, rgba(177, 138, 85, .28), transparent 28%),
+        linear-gradient(180deg, rgba(17, 24, 32, .04), rgba(17, 24, 32, .44)),
         url("/assets/shaya-atida-hero.jpg");
       background-position: center, center, center, 82% 36%;
       background-size: cover, cover, cover, auto 112%;
@@ -454,7 +461,7 @@
       position: absolute;
       inset: auto 0 0;
       height: 22%;
-      background: linear-gradient(180deg, transparent, rgba(16, 24, 32, .92));
+      background: linear-gradient(180deg, transparent, rgba(17, 24, 32, .9));
       z-index: -1;
     }
 
@@ -467,11 +474,11 @@
 
     .hero-inner {
       display: grid;
-      gap: 34px;
+      gap: 32px;
     }
 
     .hero-copy {
-      max-width: 790px;
+      max-width: 760px;
     }
 
     .eyebrow {
@@ -480,9 +487,9 @@
       align-items: center;
       gap: 10px;
       color: rgba(255, 255, 255, .84);
-      font-size: .84rem;
-      font-weight: 860;
-      letter-spacing: .08em;
+      font-size: .8rem;
+      font-weight: 760;
+      letter-spacing: .1em;
       text-transform: uppercase;
     }
 
@@ -491,45 +498,63 @@
       flex: 0 0 auto;
       width: 34px;
       height: 2px;
-      background: var(--coral);
+      background: var(--gold);
     }
 
     .eyebrow-icon {
-      width: 26px;
-      min-width: 26px;
-      font-size: 1rem;
+      width: auto;
+      min-width: 28px;
+      min-height: 22px;
+      padding: 4px 7px;
+      border: 1px solid rgba(244, 216, 173, .28);
+      border-radius: 999px;
+      color: var(--gold);
+      background: rgba(244, 216, 173, .08);
+      font-size: .66rem;
+      font-weight: 780;
     }
 
     .kicker-icon {
-      width: 24px;
+      width: auto;
+      min-width: 24px;
       height: 24px;
       margin-right: 8px;
-      border-radius: 50%;
-      color: var(--ink);
-      background: rgba(101, 210, 205, .92);
-      font-size: .82rem;
+      padding: 0 7px;
+      border-radius: 999px;
+      color: var(--accent-deep);
+      border: 1px solid rgba(11, 111, 106, .18);
+      background: rgba(11, 111, 106, .08);
+      font-size: .66rem;
+      font-weight: 780;
       vertical-align: middle;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Aptos Display", Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     h1 {
       max-width: 820px;
       margin: 0;
-      font-size: clamp(3.25rem, 8.6vw, 7.9rem);
-      line-height: .88;
+      font-size: clamp(3.25rem, 7.2vw, 6.9rem);
+      line-height: .92;
       letter-spacing: 0;
+      font-weight: 820;
     }
 
     .hero-subtitle {
-      max-width: 710px;
+      max-width: 720px;
       margin: 24px 0 0;
       color: rgba(255, 255, 255, .88);
-      font-size: clamp(1.03rem, 2.1vw, 1.44rem);
-      line-height: 1.52;
+      font-size: clamp(1.04rem, 1.8vw, 1.28rem);
+      line-height: 1.58;
     }
 
     .hero-subtitle strong {
       color: #fff;
-      font-weight: 880;
+      font-weight: 800;
     }
 
     .hero-actions {
@@ -537,7 +562,7 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 12px;
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     .button {
@@ -548,23 +573,27 @@
       gap: 10px;
       border: 1px solid transparent;
       border-radius: var(--radius);
-      padding: 13px 16px;
-      font-weight: 860;
+      padding: 12px 15px;
+      font-size: .95rem;
+      font-weight: 760;
       letter-spacing: 0;
-      transition: transform .16s ease, background .16s ease, border-color .16s ease, color .16s ease;
+      transition: transform .16s ease, background .16s ease, border-color .16s ease, color .16s ease, box-shadow .16s ease;
     }
 
     .button-icon {
-      width: 22px;
+      width: auto;
+      min-width: 22px;
       height: 22px;
-      border-radius: 50%;
-      font-size: .92rem;
-      background: rgba(255, 255, 255, .18);
+      padding: 0 6px;
+      border-radius: 999px;
+      font-size: .68rem;
+      font-weight: 820;
+      background: rgba(255, 255, 255, .16);
     }
 
     .button.primary .button-icon,
     .button.light .button-icon {
-      background: rgba(16, 24, 32, .08);
+      background: rgba(17, 24, 32, .08);
     }
 
     .button:hover {
@@ -574,20 +603,20 @@
     .button.primary {
       color: var(--ink);
       background: #fff;
-      box-shadow: 0 18px 34px rgba(0, 0, 0, .22);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, .18);
     }
 
     .button.secondary {
       color: #fff;
-      border-color: rgba(255, 255, 255, .3);
-      background: rgba(255, 255, 255, .08);
+      border-color: rgba(255, 255, 255, .26);
+      background: rgba(255, 255, 255, .07);
       backdrop-filter: blur(12px);
     }
 
     .button.dark {
       color: #fff;
       background: var(--ink);
-      box-shadow: 0 16px 30px rgba(16, 24, 32, .18);
+      box-shadow: 0 16px 30px rgba(17, 24, 32, .18);
     }
 
     .button.light {
@@ -609,26 +638,38 @@
       gap: 7px;
       padding: 8px 10px;
       border-radius: 999px;
-      color: rgba(255, 255, 255, .86);
-      border: 1px solid rgba(255, 255, 255, .22);
-      background: rgba(255, 255, 255, .08);
-      font-size: .82rem;
+      color: rgba(255, 255, 255, .82);
+      border: 1px solid rgba(255, 255, 255, .18);
+      background: rgba(255, 255, 255, .07);
+      font-size: .78rem;
+      font-weight: 720;
+    }
+
+    .chip-icon {
+      min-width: 22px;
+      min-height: 22px;
+      padding: 0 6px;
+      border-radius: 999px;
+      color: #f4d8ad;
+      background: rgba(244, 216, 173, .08);
+      border: 1px solid rgba(244, 216, 173, .2);
+      font-size: .66rem;
       font-weight: 820;
     }
 
     .hero-strip {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      border: 1px solid rgba(255, 255, 255, .22);
+      border: 1px solid rgba(255, 255, 255, .2);
       border-radius: var(--radius);
-      background: rgba(16, 24, 32, .52);
+      background: rgba(17, 24, 32, .54);
       backdrop-filter: blur(18px);
       overflow: hidden;
     }
 
     .strip-item {
-      min-height: 112px;
-      padding: 18px;
+      min-height: 116px;
+      padding: 18px 20px;
       border-left: 1px solid rgba(255, 255, 255, .16);
     }
 
@@ -641,75 +682,90 @@
       align-items: center;
       gap: 7px;
       color: rgba(255, 255, 255, .58);
-      font-size: .78rem;
-      font-weight: 850;
+      font-size: .74rem;
+      font-weight: 760;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: .1em;
     }
 
     .strip-icon {
-      width: 24px;
+      width: auto;
+      min-width: 24px;
       height: 24px;
-      border-radius: 50%;
-      color: #fff;
-      background: rgba(255, 255, 255, .1);
-      font-size: .9rem;
+      padding: 0 6px;
+      border-radius: 999px;
+      color: #f4d8ad;
+      border: 1px solid rgba(244, 216, 173, .22);
+      background: rgba(244, 216, 173, .08);
+      font-size: .66rem;
+      font-weight: 820;
     }
 
     .strip-item strong {
       display: block;
       margin-top: 12px;
       color: #fff;
-      font-size: 1.02rem;
-      line-height: 1.28;
+      font-size: 1rem;
+      line-height: 1.32;
+      font-weight: 760;
     }
 
     .section {
-      padding: 88px 0;
+      padding: 92px 0;
     }
 
     .section.dark {
       color: #fff;
-      background: var(--ink);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(11, 111, 106, .2), transparent 28%),
+        linear-gradient(180deg, #111820 0%, #19232d 100%);
     }
 
     .section-head {
       display: grid;
       grid-template-columns: minmax(0, .82fr) minmax(280px, .52fr);
-      gap: 48px;
+      gap: 54px;
       align-items: end;
-      margin-bottom: 34px;
+      margin-bottom: 36px;
     }
 
     .section-kicker {
       margin: 0 0 12px;
-      color: var(--teal-dark);
+      color: var(--accent-deep);
       font-size: .8rem;
-      font-weight: 900;
-      letter-spacing: .12em;
+      font-weight: 780;
+      letter-spacing: .14em;
       text-transform: uppercase;
     }
 
     .dark .section-kicker {
-      color: #65d2cd;
+      color: #7dd8d1;
+    }
+
+    .dark .kicker-icon,
+    .contact-kicker .kicker-icon {
+      color: #f4d8ad;
+      border-color: rgba(244, 216, 173, .24);
+      background: rgba(244, 216, 173, .09);
     }
 
     h2 {
       margin: 0;
-      font-size: clamp(2rem, 4vw, 4.4rem);
-      line-height: .98;
+      font-size: clamp(2rem, 3.5vw, 3.85rem);
+      line-height: 1;
       letter-spacing: 0;
+      font-weight: 820;
     }
 
     .lead {
       margin: 0;
       color: var(--muted);
-      font-size: 1.06rem;
-      line-height: 1.7;
+      font-size: 1.04rem;
+      line-height: 1.68;
     }
 
     .dark .lead {
-      color: rgba(255, 255, 255, .72);
+      color: rgba(255, 255, 255, .7);
     }
 
     .feature-band,
@@ -736,19 +792,19 @@
     .card {
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 22px;
-      background: rgba(255, 255, 255, .9);
-      box-shadow: 0 12px 34px rgba(16, 24, 32, .06);
+      padding: 24px;
+      background: rgba(255, 255, 255, .94);
+      box-shadow: var(--shadow-soft);
     }
 
     .feature-card {
-      min-height: 320px;
+      min-height: 330px;
       display: grid;
       align-content: end;
       overflow: hidden;
       color: #fff;
       background:
-        linear-gradient(180deg, rgba(16, 24, 32, .1), rgba(16, 24, 32, .86)),
+        linear-gradient(180deg, rgba(17, 24, 32, .06), rgba(17, 24, 32, .88)),
         url("/assets/shaya-atida-headshot.jpg");
       background-size: cover;
       background-position: center 34%;
@@ -762,8 +818,9 @@
     .work-card h3,
     .timeline-item h3 {
       margin: 0;
-      font-size: 1.18rem;
+      font-size: 1.16rem;
       letter-spacing: 0;
+      font-weight: 780;
     }
 
     .card-title {
@@ -773,13 +830,16 @@
     }
 
     .card-icon {
-      width: 34px;
+      width: auto;
+      min-width: 34px;
       height: 34px;
-      border: 1px solid rgba(16, 24, 32, .1);
-      border-radius: 50%;
+      padding: 0 8px;
+      border: 1px solid rgba(17, 24, 32, .1);
+      border-radius: 999px;
       color: var(--ink);
-      background: rgba(0, 143, 139, .1);
-      font-size: 1rem;
+      background: rgba(11, 111, 106, .08);
+      font-size: .68rem;
+      font-weight: 760;
     }
 
     .dark .card-icon,
@@ -787,7 +847,7 @@
     .work-card .card-icon {
       color: #fff;
       border-color: rgba(255, 255, 255, .16);
-      background: rgba(101, 210, 205, .12);
+      background: rgba(125, 216, 209, .1);
     }
 
     .card p,
@@ -807,12 +867,12 @@
 
     .tag {
       padding: 7px 9px;
-      border: 1px solid rgba(16, 24, 32, .13);
+      border: 1px solid rgba(17, 24, 32, .13);
       border-radius: 999px;
-      color: rgba(16, 24, 32, .7);
+      color: rgba(17, 24, 32, .7);
       background: rgba(255, 255, 255, .56);
       font-size: .78rem;
-      font-weight: 820;
+      font-weight: 720;
     }
 
     .dark .tag,
@@ -834,7 +894,7 @@
       position: relative;
       padding-left: 18px;
       color: var(--muted);
-      line-height: 1.5;
+      line-height: 1.54;
     }
 
     .micro-list li::before {
@@ -844,8 +904,8 @@
       top: .65em;
       width: 7px;
       height: 7px;
-      border-radius: 50%;
-      background: var(--teal);
+      border-radius: 999px;
+      background: var(--accent);
     }
 
     .dark .micro-list li,
@@ -857,7 +917,7 @@
     .dark .micro-list li::before,
     .work-card .micro-list li::before,
     .feature-card .micro-list li::before {
-      background: #65d2cd;
+      background: #7dd8d1;
     }
 
     .work-grid {
@@ -867,21 +927,23 @@
     }
 
     .work-card {
-      min-height: 328px;
+      min-height: 334px;
       border: 1px solid rgba(255, 255, 255, .16);
       border-radius: var(--radius);
-      padding: 22px;
+      padding: 24px;
       display: grid;
       grid-template-rows: auto auto 1fr;
       gap: 18px;
-      background: rgba(255, 255, 255, .07);
-      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      background: rgba(255, 255, 255, .06);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, .12);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
     }
 
     .work-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(255, 255, 255, .32);
-      background: rgba(255, 255, 255, .1);
+      border-color: rgba(244, 216, 173, .32);
+      background: rgba(255, 255, 255, .09);
+      box-shadow: 0 22px 54px rgba(0, 0, 0, .16);
     }
 
     .work-card p {
@@ -896,9 +958,9 @@
     }
 
     .work-number {
-      color: rgba(255, 255, 255, .34);
-      font-size: clamp(3.1rem, 6vw, 4rem);
-      font-weight: 950;
+      color: rgba(244, 216, 173, .42);
+      font-size: clamp(2.7rem, 5vw, 3.65rem);
+      font-weight: 820;
       line-height: .8;
     }
 
@@ -943,6 +1005,7 @@
     .mini-profile strong {
       display: block;
       font-size: 1.08rem;
+      font-weight: 780;
     }
 
     .mini-profile span {
@@ -955,6 +1018,12 @@
     .timeline-list {
       display: grid;
       gap: 12px;
+    }
+
+    .profile-head {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
     }
 
     .timeline-item {
@@ -971,10 +1040,10 @@
     }
 
     .timeline-date {
-      color: var(--teal-dark);
+      color: var(--accent-deep);
       font-size: .84rem;
-      font-weight: 900;
-      letter-spacing: .08em;
+      font-weight: 780;
+      letter-spacing: .1em;
       text-transform: uppercase;
     }
 
@@ -991,20 +1060,21 @@
       grid-template-columns: minmax(0, 1fr) auto;
       gap: 24px;
       align-items: end;
-      border: 1px solid rgba(0, 143, 139, .24);
+      border: 1px solid rgba(11, 111, 106, .18);
       border-radius: var(--radius);
       padding: 24px;
       background:
-        linear-gradient(135deg, rgba(0, 143, 139, .1), rgba(47, 108, 187, .08) 52%, rgba(255, 255, 255, .98));
-      box-shadow: 0 16px 40px rgba(16, 24, 32, .08);
+        linear-gradient(135deg, rgba(11, 111, 106, .08), rgba(177, 138, 85, .08) 48%, rgba(255, 255, 255, .98));
+      box-shadow: var(--shadow-soft);
     }
 
     .featured-work h3 {
       margin: 0;
       max-width: 790px;
-      font-size: clamp(1.55rem, 2.6vw, 2.55rem);
-      line-height: 1.03;
+      font-size: clamp(1.55rem, 2.3vw, 2.35rem);
+      line-height: 1.06;
       letter-spacing: 0;
+      font-weight: 800;
     }
 
     .featured-work .button {
@@ -1017,12 +1087,14 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: #fff;
+      box-shadow: 0 8px 22px rgba(17, 24, 32, .04);
     }
 
     .proof strong {
       display: block;
       font-size: 2rem;
       line-height: 1;
+      font-weight: 820;
     }
 
     .proof span {
@@ -1030,7 +1102,7 @@
       margin-top: 10px;
       color: var(--muted);
       line-height: 1.35;
-      font-weight: 720;
+      font-weight: 700;
     }
 
     .evidence-card {
@@ -1041,23 +1113,28 @@
       display: grid;
       align-content: start;
       background: #fff;
-      box-shadow: 0 12px 34px rgba(16, 24, 32, .05);
+      box-shadow: 0 12px 34px rgba(17, 24, 32, .05);
     }
 
     .metric-icon {
-      width: 34px;
+      width: auto;
+      min-width: 34px;
       height: 34px;
+      padding: 0 8px;
       margin-bottom: 14px;
-      border: 1px solid rgba(0, 143, 139, .2);
-      border-radius: 50%;
-      background: rgba(0, 143, 139, .09);
-      font-size: 1rem;
+      border: 1px solid rgba(11, 111, 106, .2);
+      border-radius: 999px;
+      color: var(--accent-deep);
+      background: rgba(11, 111, 106, .08);
+      font-size: .68rem;
+      font-weight: 760;
     }
 
     .evidence-card strong {
       display: block;
-      font-size: clamp(1.7rem, 3vw, 2.55rem);
+      font-size: clamp(1.65rem, 2.7vw, 2.45rem);
       line-height: .96;
+      font-weight: 820;
     }
 
     .evidence-card span {
@@ -1065,7 +1142,7 @@
       margin-top: 12px;
       color: var(--muted);
       line-height: 1.38;
-      font-weight: 760;
+      font-weight: 700;
     }
 
     .contact-band {
@@ -1074,17 +1151,24 @@
       gap: 24px;
       align-items: center;
       border-radius: var(--radius);
-      padding: 24px;
+      padding: 28px;
       color: #fff;
-      background: linear-gradient(135deg, var(--ink), #163139 56%, #23464a);
-      box-shadow: 0 18px 42px rgba(16, 24, 32, .14);
+      background:
+        linear-gradient(90deg, rgba(177, 138, 85, .18), transparent 44%),
+        linear-gradient(135deg, var(--ink), #17252d 58%, #173b3b),
+        linear-gradient(90deg, rgba(177, 138, 85, .36), transparent);
+      box-shadow: 0 18px 42px rgba(17, 24, 32, .14);
       overflow: hidden;
+    }
+
+    .contact-kicker {
+      color: rgba(255, 255, 255, .74);
     }
 
     .contact-band h2 {
       max-width: 780px;
-      font-size: clamp(1.45rem, 2.5vw, 2.4rem);
-      line-height: 1.08;
+      font-size: clamp(1.45rem, 2.3vw, 2.25rem);
+      line-height: 1.1;
     }
 
     .contact-actions {
@@ -1099,7 +1183,7 @@
       padding: 18px 0 22px;
       color: var(--muted);
       font-size: .86rem;
-      background: rgba(255, 255, 255, .72);
+      background: rgba(255, 255, 255, .84);
     }
 
     .footer-inner {
@@ -1111,7 +1195,7 @@
 
     .footer-inner a {
       color: var(--ink);
-      font-weight: 780;
+      font-weight: 720;
     }
 
     .legal-links {
@@ -1130,7 +1214,7 @@
 
     .footer-meta strong {
       color: var(--ink);
-      font-weight: 900;
+      font-weight: 820;
     }
 
     .footer-meta span {
@@ -1150,9 +1234,9 @@
 
     @media (max-width: 960px) {
       .hero {
-        min-height: 90svh;
+        min-height: 86svh;
         background:
-          linear-gradient(180deg, rgba(16, 24, 32, .18) 0%, rgba(16, 24, 32, .88) 52%, rgba(16, 24, 32, .98) 100%),
+          linear-gradient(180deg, rgba(17, 24, 32, .12) 0%, rgba(17, 24, 32, .86) 52%, rgba(17, 24, 32, .98) 100%),
           url("/assets/shaya-atida-hero.jpg");
         background-size: cover, auto 108%;
         background-position: center, 50% top;
@@ -1227,7 +1311,7 @@
         position: fixed;
         inset: 64px 14px auto;
         z-index: 24;
-        padding: 10px;
+        padding: 8px;
         display: none;
         flex-direction: column;
         align-items: stretch;
@@ -1262,11 +1346,12 @@
 
       .hero {
         min-height: auto;
-        padding: 82px 0 24px;
+        padding: 84px 0 24px;
       }
 
       h1 {
-        font-size: clamp(2.85rem, 15.8vw, 4.2rem);
+        font-size: clamp(2.75rem, 14vw, 4rem);
+        line-height: .96;
       }
 
       .hero-subtitle {
@@ -1342,7 +1427,7 @@
       }
 
       .section {
-        padding: 62px 0;
+        padding: 64px 0;
       }
 
       .section-head {
@@ -1371,7 +1456,7 @@
 
       .contact-actions .button {
         min-height: 42px;
-        width: auto;
+        width: 100%;
         padding: 10px 12px;
       }
 
@@ -1382,6 +1467,7 @@
 
       .legal-links {
         justify-content: flex-start;
+        gap: 10px;
       }
 
       .featured-work {
@@ -1439,10 +1525,10 @@
         <span aria-hidden="true"></span>
       </button>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#focus"><span class="nav-icon" aria-hidden="true">↗</span>Impact</a>
-        <a href="#expertise"><span class="nav-icon" aria-hidden="true">⚙️</span>Expertise</a>
-        <a href="#profile"><span class="nav-icon" aria-hidden="true">🎓</span>Research</a>
-        <a href="#speaking"><span class="nav-icon" aria-hidden="true">🎤</span>Speaking</a>
+        <a href="#focus"><span class="nav-icon" aria-hidden="true">01</span>Impact</a>
+        <a href="#expertise"><span class="nav-icon" aria-hidden="true">02</span>Expertise</a>
+        <a href="#profile"><span class="nav-icon" aria-hidden="true">03</span>Research</a>
+        <a href="#speaking"><span class="nav-icon" aria-hidden="true">04</span>Speaking</a>
       </nav>
     </div>
   </header>
@@ -1451,7 +1537,7 @@
     <section class="hero" id="top" aria-labelledby="heroTitle">
       <div class="hero-inner">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="eyebrow-icon" aria-hidden="true">⚡</span>Group CTO | PhD in Information Systems</p>
+          <p class="eyebrow"><span class="eyebrow-icon" aria-hidden="true">CTO</span>Group CTO | PhD in Information Systems</p>
           <h1 id="heroTitle">Shaya Pourmirza</h1>
           <p class="hero-subtitle">
             <strong>Official profile of Shaya Pourmirza.</strong>
@@ -1459,31 +1545,31 @@
           </p>
           <div class="hero-actions">
             <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">in</span>LinkedIn profile</a>
-            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">🎓</span>Google Scholar</a>
-            <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf" target="_blank" rel="noreferrer"><span class="button-icon" aria-hidden="true">📘</span>Runtime Party Switch book</a>
+            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">GS</span>Google Scholar</a>
+            <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf" target="_blank" rel="noreferrer"><span class="button-icon" aria-hidden="true">PDF</span>Runtime Party Switch book</a>
           </div>
           <div class="promo-line" aria-label="Core domains">
-            <span><span class="chip-icon" aria-hidden="true">🏢</span>Group CTO</span>
-            <span><span class="chip-icon" aria-hidden="true">🤖</span>AI + Data Leadership</span>
-            <span><span class="chip-icon" aria-hidden="true">🎓</span>Academic Systems Research</span>
+            <span><span class="chip-icon" aria-hidden="true">CTO</span>Group CTO</span>
+            <span><span class="chip-icon" aria-hidden="true">AI</span>AI + Data Leadership</span>
+            <span><span class="chip-icon" aria-hidden="true">PhD</span>Academic Systems Research</span>
           </div>
         </div>
 
         <div class="hero-strip reveal" aria-label="Profile highlights">
           <div class="strip-item">
-            <span><span class="strip-icon" aria-hidden="true">⏱️</span>Experience</span>
+            <span><span class="strip-icon" aria-hidden="true">15</span>Experience</span>
             <strong>15+ years in data, software and IT</strong>
           </div>
           <div class="strip-item">
-            <span><span class="strip-icon" aria-hidden="true">🧭</span>Leadership</span>
+            <span><span class="strip-icon" aria-hidden="true">EU</span>Leadership</span>
             <strong>Product, data and engineering leadership across European markets</strong>
           </div>
           <div class="strip-item">
-            <span><span class="strip-icon" aria-hidden="true">🎓</span>Research</span>
+            <span><span class="strip-icon" aria-hidden="true">PhD</span>Research</span>
             <strong>PhD, 15+ peer-reviewed publications</strong>
           </div>
           <div class="strip-item">
-            <span><span class="strip-icon" aria-hidden="true">🎤</span>Public Work</span>
+            <span><span class="strip-icon" aria-hidden="true">Pub</span>Public profile</span>
             <strong>Speaker, panelist, reviewer, author</strong>
           </div>
         </div>
@@ -1494,7 +1580,7 @@
       <div class="section-inner">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">↗</span>Executive technology impact</p>
+            <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">01</span>Executive technology impact</p>
             <h2>Business strategy, grounded in technology expertise.</h2>
           </div>
           <p class="lead">
@@ -1506,7 +1592,7 @@
           <article class="card feature-card reveal">
             <div>
               <div class="card-title">
-                <span class="card-icon" aria-hidden="true">⚙️</span>
+                <span class="card-icon" aria-hidden="true">CTO</span>
                 <h3>CTO-level operating leverage</h3>
               </div>
               <ul class="micro-list">
@@ -1519,7 +1605,7 @@
 
           <article class="card reveal">
             <div class="card-title">
-              <span class="card-icon" aria-hidden="true">🧭</span>
+              <span class="card-icon" aria-hidden="true">Ops</span>
               <h3>Business-facing technology leadership</h3>
             </div>
             <ul class="micro-list">
@@ -1533,22 +1619,22 @@
 
         <div class="evidence-grid reveal" aria-label="Senior profile proof points">
           <div class="evidence-card">
-            <span class="metric-icon" aria-hidden="true">⏱️</span>
+            <span class="metric-icon" aria-hidden="true">15</span>
             <strong>15+</strong>
             <span>years in data, software development and IT</span>
           </div>
           <div class="evidence-card">
-            <span class="metric-icon" aria-hidden="true">🧭</span>
+            <span class="metric-icon" aria-hidden="true">8</span>
             <strong>8+</strong>
             <span>years of technology leadership across product and data</span>
           </div>
           <div class="evidence-card">
-            <span class="metric-icon" aria-hidden="true">🌍</span>
+            <span class="metric-icon" aria-hidden="true">EU</span>
             <strong>70+</strong>
             <span>product, data, engineering and platform specialists led across European markets</span>
           </div>
           <div class="evidence-card">
-            <span class="metric-icon" aria-hidden="true">🎓</span>
+            <span class="metric-icon" aria-hidden="true">PhD</span>
             <strong>PhD</strong>
             <span>Information Systems research with 290+ citations across the publication record</span>
           </div>
@@ -1560,7 +1646,7 @@
       <div class="section-inner">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">⚙️</span>Core technology expertise</p>
+            <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">02</span>Core technology expertise</p>
             <h2>Composable commerce, AI and data, technology leadership.</h2>
           </div>
           <p class="lead">
@@ -1572,7 +1658,7 @@
           <article class="work-card reveal">
             <div class="work-meta">
               <div class="work-number">01</div>
-              <span class="card-icon" aria-hidden="true">🧩</span>
+              <span class="card-icon" aria-hidden="true">MACH</span>
             </div>
             <h3>Composable e-commerce: B2C and B2B</h3>
             <ul class="micro-list">
@@ -1585,7 +1671,7 @@
           <article class="work-card reveal">
             <div class="work-meta">
               <div class="work-number">02</div>
-              <span class="card-icon" aria-hidden="true">🤖</span>
+              <span class="card-icon" aria-hidden="true">AI</span>
             </div>
             <h3>AI and data foundations</h3>
             <ul class="micro-list">
@@ -1598,7 +1684,7 @@
           <article class="work-card reveal">
             <div class="work-meta">
               <div class="work-number">03</div>
-              <span class="card-icon" aria-hidden="true">🧭</span>
+              <span class="card-icon" aria-hidden="true">Lead</span>
             </div>
             <h3>Technology and data leadership</h3>
             <ul class="micro-list">
@@ -1627,9 +1713,9 @@
           </aside>
 
           <div>
-            <div class="section-head reveal" style="grid-template-columns: 1fr; gap: 16px; margin-bottom: 24px;">
+            <div class="section-head profile-head reveal">
               <div>
-                <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">🎓</span>Academic depth and executive profile</p>
+                <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">03</span>Academic depth and executive profile</p>
                 <h2>A Group CTO with a full research and professional track.</h2>
               </div>
             </div>
@@ -1639,7 +1725,7 @@
                 <div class="timeline-date">Now</div>
                 <div>
                   <div class="card-title">
-                    <span class="card-icon" aria-hidden="true">🏢</span>
+                    <span class="card-icon" aria-hidden="true">CTO</span>
                     <h3>Group CTO at Atida</h3>
                   </div>
                   <ul class="micro-list">
@@ -1655,7 +1741,7 @@
                 <div class="timeline-date">PhD</div>
                 <div>
                   <div class="card-title">
-                    <span class="card-icon" aria-hidden="true">🎓</span>
+                    <span class="card-icon" aria-hidden="true">PhD</span>
                     <h3>Business Process Management and Information Systems</h3>
                   </div>
                   <ul class="micro-list">
@@ -1670,7 +1756,7 @@
                 <div class="timeline-date">Publications</div>
                 <div>
                   <div class="card-title">
-                    <span class="card-icon" aria-hidden="true">📚</span>
+                    <span class="card-icon" aria-hidden="true">Pub</span>
                     <h3>Author, reviewer and academic contributor</h3>
                   </div>
                   <ul class="micro-list">
@@ -1686,7 +1772,7 @@
                 <div class="timeline-date">Mentorship</div>
                 <div>
                   <div class="card-title">
-                    <span class="card-icon" aria-hidden="true">🧑‍🏫</span>
+                    <span class="card-icon" aria-hidden="true">Teach</span>
                     <h3>Teaching, supervision and technical community</h3>
                   </div>
                   <ul class="micro-list">
@@ -1700,7 +1786,7 @@
 
             <article class="featured-work reveal" aria-labelledby="runtimeBookTitle">
               <div>
-                <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">📘</span>Featured book</p>
+                <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">Book</span>Featured book</p>
                 <h3 id="runtimeBookTitle">Runtime Party Switch in an Inter-Organizational Collaboration</h3>
                 <ul class="micro-list">
                   <li>PhD book and dissertation from Eindhoven University of Technology.</li>
@@ -1738,7 +1824,7 @@
       <div class="section-inner">
         <div class="section-head reveal">
           <div>
-            <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">🎤</span>Public speaking and thought leadership</p>
+            <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">04</span>Public speaking and thought leadership</p>
             <h2>Executive themes for audiences that care about outcomes.</h2>
           </div>
         </div>
@@ -1746,7 +1832,7 @@
         <div class="signal-grid">
           <article class="card reveal">
             <div class="card-title">
-              <span class="card-icon" aria-hidden="true">🤖</span>
+              <span class="card-icon" aria-hidden="true">AI</span>
               <h3>AI at operating scale</h3>
             </div>
             <ul class="micro-list">
@@ -1758,7 +1844,7 @@
 
           <article class="card reveal">
             <div class="card-title">
-              <span class="card-icon" aria-hidden="true">🧩</span>
+              <span class="card-icon" aria-hidden="true">MACH</span>
               <h3>MACH, microservices and platform strategy</h3>
             </div>
             <ul class="micro-list">
@@ -1770,7 +1856,7 @@
 
           <article class="card reveal">
             <div class="card-title">
-              <span class="card-icon" aria-hidden="true">💊</span>
+              <span class="card-icon" aria-hidden="true">Rx</span>
               <h3>Data, product and digital pharmacy</h3>
             </div>
             <ul class="micro-list">
@@ -1782,7 +1868,7 @@
 
           <article class="card reveal">
             <div class="card-title">
-              <span class="card-icon" aria-hidden="true">🎓</span>
+              <span class="card-icon" aria-hidden="true">PhD</span>
               <h3>Adaptive systems and process research</h3>
             </div>
             <ul class="micro-list">
@@ -1800,12 +1886,12 @@
       <div class="section-inner">
         <div class="contact-band reveal">
           <div>
-            <p class="section-kicker" style="color: rgba(255,255,255,.74);"><span class="kicker-icon" aria-hidden="true">🔗</span>Public profile</p>
+            <p class="section-kicker contact-kicker"><span class="kicker-icon" aria-hidden="true">Link</span>Public profile</p>
             <h2>For the official profile, research record and public technology work.</h2>
           </div>
           <div class="contact-actions">
             <a class="button primary" href="https://nl.linkedin.com/in/shayapourmirza" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">in</span>LinkedIn</a>
-            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">🎓</span>Google Scholar</a>
+            <a class="button secondary" href="https://scholar.google.com/citations?user=f-rO6QEAAAAJ&hl=en" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">GS</span>Google Scholar</a>
             <a class="button secondary" href="https://www.researchgate.net/profile/Shaya-Pourmirza" target="_blank" rel="me noreferrer"><span class="button-icon" aria-hidden="true">RG</span>ResearchGate</a>
           </div>
         </div>

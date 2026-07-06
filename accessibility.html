@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#101820">
+  <meta name="theme-color" content="#111820">
   <title>Accessibility Statement | Shaya Pourmirza</title>
   <meta name="description" content="Accessibility statement for the official Shaya Pourmirza profile at shaya.click.">
   <link rel="canonical" href="https://shaya.click/accessibility.html">
@@ -16,22 +16,24 @@
   <link rel="manifest" href="/site.webmanifest">
   <style>
     :root {
-      --ink: #101820;
-      --muted: #5a6671;
-      --line: rgba(16, 24, 32, .14);
-      --teal: #006f70;
-      --paper: #f7faf9;
+      --ink: #111820;
+      --muted: #5f6a73;
+      --line: rgba(17, 24, 32, .12);
+      --accent: #0b6f6a;
+      --paper: #f5f7f6;
       --max: 860px;
+      color-scheme: light;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
-      background: var(--paper);
+      background: linear-gradient(180deg, #f6f8f7 0%, #ffffff 42%, #f2f5f4 100%);
       line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
 
     main, footer {
@@ -41,7 +43,8 @@
 
     header {
       border-bottom: 1px solid var(--line);
-      background: #fff;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(18px);
     }
 
     .nav {
@@ -55,21 +58,30 @@
     }
 
     a {
-      color: var(--teal);
-      font-weight: 780;
+      color: var(--accent);
+      font-weight: 720;
       text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 3px solid rgba(11, 111, 106, .24);
+      outline-offset: 3px;
     }
 
     h1 {
       margin: 54px 0 12px;
       font-size: clamp(2.2rem, 7vw, 4rem);
       line-height: 1;
+      font-family: "Aptos Display", Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 820;
     }
 
     h2 {
       margin: 34px 0 10px;
       font-size: 1.32rem;
       line-height: 1.2;
+      font-family: "Aptos Display", Aptos, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 780;
     }
 
     p, li {
@@ -78,7 +90,7 @@
 
     .updated {
       color: var(--muted);
-      font-weight: 760;
+      font-weight: 700;
     }
 
     section {
