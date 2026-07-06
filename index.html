@@ -182,7 +182,7 @@
           "description": "Official personal site of Shaya Pourmirza: Group CTO at Atida, AI and data executive, public speaker, author and PhD-trained information systems researcher.",
           "inLanguage": "en",
           "dateCreated": "2026-07-05T00:00:00+02:00",
-          "dateModified": "2026-07-06T13:35:16+02:00",
+          "dateModified": "2026-07-06T13:43:31+02:00",
           "isPartOf": {
             "@id": "https://shaya.click/#website"
           },
@@ -1106,42 +1106,52 @@
     }
 
     .evidence-card {
-      min-height: 138px;
+      min-height: 168px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 18px;
+      padding: 24px;
       display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      grid-template-rows: auto 1fr;
+      column-gap: 18px;
+      row-gap: 12px;
       align-content: start;
+      align-items: start;
       background: #fff;
       box-shadow: 0 12px 34px rgba(17, 24, 32, .05);
     }
 
     .metric-icon {
-      width: 34px;
-      min-width: 34px;
-      height: 34px;
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      width: 42px;
+      min-width: 42px;
+      height: 42px;
       padding: 0;
-      margin-bottom: 14px;
+      margin-top: 2px;
       border: 1px solid rgba(11, 111, 106, .2);
       border-radius: 999px;
       color: var(--accent-deep);
       background: rgba(11, 111, 106, .08);
-      font-size: 1rem;
+      font-size: 1.08rem;
       font-weight: 700;
     }
 
     .evidence-card strong {
       display: block;
-      font-size: clamp(1.65rem, 2.7vw, 2.45rem);
-      line-height: .96;
+      grid-column: 2;
+      font-size: clamp(2.25rem, 4vw, 3.35rem);
+      line-height: .88;
       font-weight: 820;
     }
 
-    .evidence-card span {
+    .evidence-card > span:not(.metric-icon) {
       display: block;
-      margin-top: 12px;
+      grid-column: 2;
+      margin-top: 0;
       color: var(--muted);
-      line-height: 1.38;
+      font-size: .98rem;
+      line-height: 1.42;
       font-weight: 700;
     }
 
