@@ -134,7 +134,7 @@
     <p class="updated">Last updated: July 6, 2026</p>
     <p class="notice">
       This is a privacy-first static personal profile. It has no accounts, forms, comments, newsletter signup,
-      advertising pixels or visitor profiling. It uses Simple Analytics for anonymous aggregate traffic statistics.
+      advertising pixels or visitor profiling. It uses Cloudflare Web Analytics for anonymous aggregate traffic statistics.
     </p>
 
     <section>
@@ -192,15 +192,13 @@
     <section>
       <h2>Anonymous Analytics, Cookies and Tracking</h2>
       <p>
-        shaya.click uses Simple Analytics to understand aggregate website usage, such as page views, referrers,
+        shaya.click uses Cloudflare Web Analytics to understand aggregate website usage, such as page views, referrers,
         approximate location, device type and browser category. This analytics setup is intended to measure traffic
         patterns, not identify individual visitors.
       </p>
       <p>
-        According to Simple Analytics, its standard script works without cookies, does not store personal data about
-        visitors, does not store IP addresses, does not store anything in the browser, and does not track visitors
-        across sessions, devices or websites. Because the analytics setup is cookie-free and aggregate, no analytics
-        cookie banner is shown.
+        Cloudflare Web Analytics works without cookies and Cloudflare states that it does not collect or use visitors'
+        personal data. Because the analytics setup is cookie-free and aggregate, no analytics cookie banner is shown.
       </p>
       <p>
         Anonymous analytics can show patterns. It cannot identify named visitors or prove that a specific person visited
@@ -217,7 +215,7 @@
       <h2>Recipients and External Platforms</h2>
       <p>
         The site may rely on infrastructure providers for hosting, DNS, HTTPS certificates, security and content delivery,
-        and on Simple Analytics for anonymous aggregate website analytics. Public profile links lead to third-party
+        and on Cloudflare Web Analytics for anonymous aggregate website analytics. Public profile links lead to third-party
         platforms controlled by their respective operators. Those platforms are not controlled by this website.
       </p>
     </section>
@@ -235,7 +233,7 @@
       <h2>Retention</h2>
       <p>
         This static website does not maintain its own visitor database. Anonymous aggregate analytics are retained in
-        the Simple Analytics dashboard according to its service settings and policies. Technical logs, if any, are
+        the Cloudflare Web Analytics dashboard according to its service settings and policies. Technical logs, if any, are
         retained by hosting and security providers according to their operational policies. Messages voluntarily sent
         through external platforms may be retained for as long as needed to respond, maintain professional records,
         resolve disputes or comply with legal obligations.
@@ -287,7 +285,7 @@
     <a href="/accessibility.html">Accessibility</a>
     <a href="/sitemap.xml">Sitemap</a>
   </footer>
-  <!-- Simple Analytics - privacy-first, cookie-free aggregate analytics -->
-  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <!-- Cloudflare Web Analytics - privacy-first, cookie-free aggregate analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "9ffab3e3570c434590ffd12ba046cd8b"}'></script>
 </body>
 </html>
