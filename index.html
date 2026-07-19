@@ -145,6 +145,7 @@
             "@id": "https://shaya.click/#runtime-party-switch-book",
             "name": "Runtime Party Switch in an Inter-Organizational Collaboration",
             "url": "https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf",
+            "image": "https://shaya.click/assets/runtime-party-switch-book-cover.png",
             "author": {
               "@id": "https://shaya.click/#shaya-pourmirza"
             },
@@ -1058,9 +1059,9 @@
     .featured-work {
       margin-top: 18px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-columns: 168px minmax(0, 1fr);
       gap: 24px;
-      align-items: end;
+      align-items: center;
       border: 1px solid rgba(11, 111, 106, .18);
       border-radius: var(--radius);
       padding: 24px;
@@ -1076,6 +1077,33 @@
       line-height: 1.06;
       letter-spacing: 0;
       font-weight: 800;
+    }
+
+    .book-cover-link {
+      display: block;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 14px 28px rgba(25, 18, 38, .2);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .book-cover-link:hover,
+    .book-cover-link:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 34px rgba(25, 18, 38, .26);
+    }
+
+    .book-cover {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 848 / 1240;
+      object-fit: cover;
+    }
+
+    .featured-work-content {
+      display: grid;
+      gap: 18px;
     }
 
     .featured-work .button {
@@ -1287,6 +1315,11 @@
       .featured-work {
         grid-template-columns: 1fr;
         align-items: start;
+      }
+
+      .book-cover-link {
+        width: min(220px, 62vw);
+        justify-self: center;
       }
 
       .featured-work .button {
@@ -1796,7 +1829,10 @@
             </div>
 
             <article class="featured-work reveal" aria-labelledby="runtimeBookTitle">
-              <div>
+              <a class="book-cover-link" href="https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf" target="_blank" rel="noreferrer" aria-label="Read Runtime Party Switch in an Inter-Organizational Collaboration">
+                <img class="book-cover" src="/assets/runtime-party-switch-book-cover.png" width="848" height="1240" loading="lazy" alt="Book cover of Runtime Party Switch in an Inter-Organizational Collaboration by Shaya Pourmirza">
+              </a>
+              <div class="featured-work-content">
                 <p class="section-kicker"><span class="kicker-icon" aria-hidden="true">📘</span>Featured book</p>
                 <h3 id="runtimeBookTitle">Runtime Party Switch in an Inter-Organizational Collaboration</h3>
                 <ul class="micro-list">
@@ -1804,8 +1840,8 @@
                   <li>Focus: replacing a party during B2B collaboration at runtime while preserving autonomy and state continuity.</li>
                   <li>Research bridge between BPM systems, service-oriented architecture and adaptive enterprise systems.</li>
                 </ul>
+                <a class="button dark" href="https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf" target="_blank" rel="noreferrer">Read the book</a>
               </div>
-              <a class="button dark" href="https://www.researchgate.net/profile/Shaya-Pourmirza/publication/311104624_Runtime_party_switch_in_an_inter-organizational_collaboration/links/58c9b0d6458515e9298a0811/Runtime-party-switch-in-an-inter-organizational-collaboration.pdf" target="_blank" rel="noreferrer">Read the book</a>
             </article>
 
             <div class="proof-row reveal" aria-label="Public profile signals">
